@@ -432,6 +432,7 @@ typedef NS_ENUM(NSUInteger, ZoomVideoSDKSubscribeFailReason) {
     ZoomVideoSDKSubscribeFailReason_HasSubscribeExceededLimit,
     ZoomVideoSDKSubscribeFailReason_HasSubscribe1080POr720P,
     ZoomVideoSDKSubscribeFailReason_HasSubscribeOneShare, // try to subscribe the second share
+    ZoomVideoSDKSubscribeFailReason_TooFrequentCall,
 };
 
 typedef NS_ENUM(NSUInteger,ZoomVideoSDKShareType)
