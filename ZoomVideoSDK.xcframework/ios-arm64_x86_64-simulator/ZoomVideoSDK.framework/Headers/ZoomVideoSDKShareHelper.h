@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <ZoomVideoSDK/ZoomVideoSDKAnnotationHelper.h>
-#import "ZoomVideoSDKVideoHelper.h"
 
 @protocol ZoomVideoSDKShareSource;
 @protocol ZoomVideoSDKShareAudioSource;
+@protocol ZoomVideoSDKSharePreprocessor;
 /*!
  @class ZoomVideoSDKShareStatus
  @brief Share status of user
@@ -70,6 +70,31 @@
 - (CGSize)getShareSourceContentSize;
 
 @end
+
+/*!
+ @class ZoomVideoSDKSharePreprocessParam
+ @brief start pre-process share's parameter.
+ */
+@interface ZoomVideoSDKSharePreprocessParam : NSObject
+@property (nonatomic, assign)   ZoomVideoSDKSharePreprocessType type;
+@property (nonatomic, weak)     UIView *view; // the view to share and pre-process, no need pass when type is none.
+@end
+
+/*!
+ @class ZoomVideoSDKSharePreprocessParam
+ @brief start pre-process share's parameter.
+ */
+@interface ZoomVideoSDKSharePreprocessSender : NSObject
+
+/*!
+ @brief Send preprocessed data.
+ @param rawData The processed data object.
+ @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see [ZoomVideoSDKError].
+ */
+- (ZoomVideoSDKError)sendPreprocessedData:(ZoomVideoSDKVideoRawData * _Nullable)rawData;
+
+@end
+
 
 
 /*!
@@ -240,4 +265,19 @@
  */
 - (ZoomVideoSDKError)startShareCamera:(UIView *_Nullable)parentView;
 
+
+#pragma mark - share with pre-process -
+/*!
+ @brief Start share preprocessing.
+ @param param The share preprocessing parameters. See {@link ZoomVideoSDKSharePreprocessParam}.
+ @param preprocessor Object that handles preprocessing events.
+ @return If the function succeeds, the return value is ZoomVideoSDKErrors_Success.
+ Otherwise this function fails. To get extended error information, see  {@link ZoomVideoSDKErrors} enum.
+ @notes If pAudioSource is non-null, it means share user-defined audio at the same time.
+ @notes This share type should using the CptShare.framework, zm_annoter_dynamic.framework
+ */
+- (ZoomVideoSDKError)startShareWithPreprocessing:(ZoomVideoSDKSharePreprocessParam * _Nullable)param sharePreprocessor:(id<ZoomVideoSDKSharePreprocessor> _Nullable)preProcessDelegate;
+
 @end
+
+

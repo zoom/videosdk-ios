@@ -22,12 +22,14 @@
 #import <ZoomVideoSDK/ZoomVideoSDKUserHelper.h>
 #import <ZoomVideoSDK/ZoomVideoSDKLiveTranscriptionHelper.h>
 #import <ZoomVideoSDK/ZoomVideoSDKFileTranserHandle.h>
+#import <ZoomVideoSDK/ZoomVideoSDKSubSessionHelper.h>
 
 @class ZoomVideoSDKRawDataPipe;
 @class ZoomVideoSDKVideoCanvas;
 @class ZoomVideoSDKUser;
 @class ZoomVideoSDKProxySettingHandler;
 @class ZoomVideoSDKSSLCertificateInfo;
+@class ZoomVideoSDKSubSessionUserHelpRequestHandler;
 
 /*!
  @brief A listener class that groups together the callbacks related to a session.
@@ -460,6 +462,51 @@
  */
 - (void)onUVCCameraStatusChange:(ZoomVideoSDKUVCCameraStatus)status;
 
+/*!
+ @brief Callback event that the SubSession status changed.
+ @param status The SubSession status.
+ @param pSubSessionKitList The new SubSession list, see {@link ZoomVideoSDKSubSessionKit}.
+*/
+    
+- (void)onSubSessionStatusChanged:(ZoomVideoSDKSubSessionStatus)status subSession:(NSArray <ZoomVideoSDKSubSessionKit*>* _Nonnull)pSubSessionKitList;
+
+/*!
+ @brief Callback event that the user has SubSession manager privilege.
+ @param pManager The SubSession manager object, see {@link ZoomVideoSDKSubSessionManager}.
+ */
+- (void)onSubSessionManagerHandle:(ZoomVideoSDKSubSessionManager* _Nullable)pManager;
+
+/*!
+ @brief Callback event that the user has SubSession attendee privilege.
+ @param pParticipant The SubSession attendee object, see {@link ZoomVideoSDKSubSessionParticipant}.
+ */
+- (void)onSubSessionParticipantHandle:(ZoomVideoSDKSubSessionParticipant* _Nullable)pParticipant;
+
+/*!
+ @brief Callback event that the users of a SubSession has updated.
+ @param pSubSessionKit The SubSession kit object, see {@link ZoomVideoSDKSubSessionKit}.
+ */
+- (void)onSubSessionUsersUpdate:(ZoomVideoSDKSubSessionKit* _Nonnull)pSubSessionKit;
+
+/*!
+ @brief Callback event that the user receives the main session broadcast message.
+ @param sMessage The message content.
+ @param sUserName The name of the user who broadcast this message.
+ */
+- (void)onBroadcastMessageFromMainSession:(NSString* _Nonnull) sMessage userName:(NSString* _Nonnull)sUserName;
+
+/*!
+ @brief Callback event that the user receives the help request from SubSession.
+ @param pHandler The request handler object, see {@link ZoomVideoSDKSubSessionUserHelpRequestHandler}.
+ */
+- (void)onSubSessionUserHelpRequestHandler:(ZoomVideoSDKSubSessionUserHelpRequestHandler*_Nonnull) pHandler;
+/*!
+ @brief Callback event that the result of help request.
+ @param result The result of help request, see {@link ZoomVideoSDKUserHelpRequestResult}.
+ */
+- (void)onSubSessionUserHelpRequestResult:(ZoomVideoSDKUserHelpRequestResult)result;
+
+
 @end
 
 #pragma mark - ZoomVideoSDKVirtualAudioSpeaker
@@ -521,14 +568,14 @@
 
 #pragma mark - ZoomVideoSDKVideoSourcePreProcessor
 /*!
- @brief Methods to modify default device capture raw data. @See ZoomVideoSDKSessionContext#preProcessor.
+ @brief Methods to modify default device capture raw data. see {@link ZoomVideoSDKSessionContext#preProcessor}.
  */
 @protocol ZoomVideoSDKVideoSourcePreProcessor <NSObject>
 
 @optional
 /*!
  @brief Callback on device capture video frame.
- @param rawData See ZoomVideoSDKPreProcessRawData
+ @param rawData See {@link ZoomVideoSDKPreProcessRawData}.
  */
 - (void)onPreProcessRawData:(ZoomVideoSDKPreProcessRawData * _Nullable)rawData;
 
@@ -544,9 +591,9 @@
 
 /*!
  @brief Callback for video source prepare.
- @param rawDataSender See ZoomVideoSDKVideoSender
- @param supportCapabilityArray See ZoomVideoSDKVideoCapability
- @param suggestCapability See ZoomVideoSDKVideoCapability
+ @param rawDataSender See {@link ZoomVideoSDKVideoSender}.
+ @param supportCapabilityArray See {@link ZoomVideoSDKVideoCapability}.
+ @param suggestCapability See {@link ZoomVideoSDKVideoCapability}.
  */
 - (void)onInitialize:(ZoomVideoSDKVideoSender *_Nonnull)rawDataSender
 supportCapabilityArray:(NSArray *_Nonnull)supportCapabilityArray
@@ -554,8 +601,8 @@ supportCapabilityArray:(NSArray *_Nonnull)supportCapabilityArray
 
 /*!
  @brief Callback for video size or fps changed.
- @param supportCapabilityArray See ZoomVideoSDKVideoCapability
- @param suggestCapability See ZoomVideoSDKVideoCapability
+ @param supportCapabilityArray See {@link ZoomVideoSDKVideoCapability}.
+ @param suggestCapability See {@link ZoomVideoSDKVideoCapability}.
  */
 - (void)onPropertyChange:(NSArray *_Nonnull)supportCapabilityArray
        suggestCapability:(ZoomVideoSDKVideoCapability *_Nonnull)suggestCapability;
@@ -585,7 +632,7 @@ supportCapabilityArray:(NSArray *_Nonnull)supportCapabilityArray
 @optional
 /*!
  @brief Callback for virtual audio microphone initialization.
- @param rawDataSender you can send audio data based on this object, See ZoomVideoSDKAudioSender
+ @param rawDataSender you can send audio data based on this object, See {@link ZoomVideoSDKAudioSender}.
  */
 - (void)onMicInitialize:(ZoomVideoSDKAudioSender *_Nonnull)rawDataSender;
 
@@ -615,7 +662,7 @@ supportCapabilityArray:(NSArray *_Nonnull)supportCapabilityArray
 @optional
 /*!
  @brief Callback for share source can start send raw data.
- @param rawDataSender See [ZoomVideoSDKShareSender].
+ @param rawDataSender  See {@link ZoomVideoSDKShareSender}.
  */
 - (void)onShareSendStarted:(ZoomVideoSDKShareSender *_Nullable)rawDataSender;
 
@@ -643,5 +690,27 @@ supportCapabilityArray:(NSArray *_Nonnull)supportCapabilityArray
  @brief Callback for audio source to stop sending raw data.
  */
 - (void)onStopSendAudio;
+
+@end
+
+#pragma mark - ZoomVideoSDKSharePreprocessor
+/*!
+ @protocol ZoomVideoSDKSharePreprocessor
+ @brief the share pre-processor.
+ */
+@protocol ZoomVideoSDKSharePreprocessor <NSObject>
+
+@optional
+/*!
+ @brief You will receive this callback when calling 'startShareWithPreprocessing' successfully.
+ @param rawData You can get the YUV data address through this object and then pre-process the data. See {@link ZoomVideoSDKVideoRawData}.
+ @param sender Use this object to send the processed data out. See {@link ZoomVideoSDKSharePreprocessSender}.
+ */
+- (void)onCapturedRawDataReceived:(ZoomVideoSDKVideoRawData *_Nullable)rawData sharePreprocessSender:(ZoomVideoSDKSharePreprocessSender *_Nullable)sender;
+
+/*!
+ @brief You will receive this callback when call 'stopShare' successfully. In this event notification, you can perform some stop and destroy actions if necessary
+ */
+- (void)onShareStopped;
 
 @end

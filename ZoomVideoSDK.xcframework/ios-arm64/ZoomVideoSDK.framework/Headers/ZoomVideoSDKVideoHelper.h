@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <ZoomVideoSDK/ZoomVideoSDKConstants.h>
+#import <ZoomVideoSDK/ZoomVideoSDKRawDataPipe.h>
 
 @protocol ZoomVideoSDKRawDataPipeDelegate;
+@class ZoomVideoSDKRawDataPipe;
+@class ZoomVideoSDKVideoCanvas;
 
 /*!
  @class ZoomVideoSDKVideoStatus
@@ -51,13 +54,15 @@
 
 
 @interface ZoomVideoSDKCameraDevice : NSObject
-@property (nonatomic, readonly, nullable, copy) NSString* deviceId;         /// camera device ID.
-@property (nonatomic, readonly, nullable, copy) NSString* deviceName;       /// camera name.
-@property (nonatomic, readonly, assign)         BOOL isSelectDevice;        /// is current use.
+@property (nonatomic, readonly, nullable, copy) NSString* deviceId;                 /// camera device ID.
+@property (nonatomic, readonly, nullable, copy) NSString* deviceName;               /// camera name.
+@property (nonatomic, readonly, assign)         BOOL isSelectDevice;                /// is current use.
 @property (nonatomic, readonly, assign)         AVCaptureDevicePosition position;   /// camera position.
-@property (nonatomic, readonly, nullable, copy) AVCaptureDeviceType deviceType; /// camera device type.
-@property (nonatomic, readonly, assign)         CGFloat maxZoomFactor;  // camera maximum zoom factor. Maximum supported is 10.
+@property (nonatomic, readonly, nullable, copy) AVCaptureDeviceType deviceType;     /// camera device type.
+@property (nonatomic, readonly, assign)         CGFloat maxZoomFactor;              /// camera maximum zoom factor. Maximum supported is 10.
 @property (nonatomic, readonly, assign)         CGFloat videoZoomFactorUpscaleThreshold;/// the maximum optical zoom factor.
+@property (nonatomic, readonly, assign)         BOOL isSelectedAsMultiCamera;       /// Determine whether the camera is selected as a multiple video stream.
+@property (nonatomic, readonly, assign)         BOOL isRunningAsMultiCamera;        /// Determine whether the camera is running as a multiple video stream.
 
 @end
 
@@ -239,5 +244,57 @@
  Otherwise failed. To get extended error information, see [ZoomVideoSDKError] enum.
  */
 - (NSArray <ZoomVideoSDKUser *>* _Nullable)getSpotlightedVideoUserList;
+
+#pragma mark - multi stream -
+
+/**
+ @brief Determine if the current device(phone, pad) support the multi camera feature or not.
+ @return If the function succeeds, it will return YES, otherwise it returns NO.
+ */
+- (BOOL)isMultiStreamSupported;
+
+/**
+ @brief Enable multiple video stream support if you have multiple cameras and other participants can see multiple videos of you.
+ @param cameraDeviceID The camera ID for the camera to enable. See @{ZoomVideoSDKCameraDevice}.
+ @param customDeviceName The custom device name of the camera. If you don't pass this parameter, the SDK generates a default name.
+ @return If the function succeeds, it will return YES, otherwise it returns NO.
+ @warning Only two cameras can open at the same time.
+ */
+- (BOOL)enableMultiStreamVideo:(NSString * _Nullable)cameraDeviceID customDeviceName:(NSString * _Nullable)customDeviceName;
+
+/**
+ @brief Disable the multiple video stream.
+ @param cameraDeviceID The camera ID that you want to disable. See @{ZoomVideoSDKCameraDevice}.
+ @return If the function succeeds, it will return YES, otherwise it returns NO.
+ */
+- (BOOL)disableMultiStreamVideo:(NSString * _Nullable)cameraDeviceID;
+
+/**
+ @brief Turn off the multiple video stream.
+ @param cameraDeviceID The camera ID running as a multiple camera. See @{ZoomVideoSDKCameraDevice}.
+ @return If the function succeeds, it will return YES, otherwise it returns NO.
+ */
+- (BOOL)muteMultiStreamVideo:(NSString * _Nullable)cameraDeviceID;
+
+/**
+ @brief Turn on the multiple video stream.
+ @param cameraDeviceID The camera ID running as a multiple camera. See @{ZoomVideoSDKCameraDevice}.
+ @return If the function succeeds, it will return YES, otherwise it returns NO.
+ */
+- (BOOL)unmuteMultiStreamVideo:(NSString * _Nullable)cameraDeviceID;
+
+/**
+ @brief Get the device ID associated with my multi-camera pipe.
+ @param pipe One of my multi-camera pipes.
+ @return The video device ID if successful. Otherwise it returns nil.
+ */
+- (NSString * _Nullable)getDeviceIDByMyPipe:(ZoomVideoSDKRawDataPipe * _Nullable)pipe;
+
+/**
+ @brief Get the device ID associated with my multi-camera canvas.
+ @param canvas One of my multi-camera canvases.
+ @return The video device ID if successful. Otherwise it returns nil.
+ */
+- (NSString *_Nullable)getDeviceIDByMyCanvas:(ZoomVideoSDKVideoCanvas *_Nullable)canvas;
 
 @end

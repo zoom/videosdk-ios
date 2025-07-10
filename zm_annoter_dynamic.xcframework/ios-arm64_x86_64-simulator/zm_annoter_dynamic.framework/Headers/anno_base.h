@@ -198,7 +198,7 @@ public:
   virtual int StopWbCapture() = 0;
 	virtual int SendWCLWBContent(IN const void* wb_content) = 0;
 
-	
+	virtual int ReceiveCptImage(IN const CptAnnoImage* cpt_image) = 0;
 };
 
 #endif // __ANNO_BASE_H__
