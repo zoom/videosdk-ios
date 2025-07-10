@@ -28,6 +28,7 @@
 #import <ZoomVideoSDK/ZoomVideoSDKCRCHelper.h>
 #import <ZoomVideoSDK/ZoomVideoSDKMaskHelper.h>
 #import <ZoomVideoSDK/ZoomVideoSDKRemoteCameraControlHelper.h>
+#import <ZoomVideoSDK/ZoomVideoSDKSubSessionHelper.h>
 
 /*!
  @class ZoomVideoSDKExtendParams
@@ -363,5 +364,19 @@
  @return If the function succeeds, the return value is the mask helper object. Otherwise returns nil.
  */
 - (ZoomVideoSDKMaskHelper * _Nullable)getMaskHelper;
+
+/*!
+@brief Get SubSession stream helper object. Only host and manager can call this interface.
+@return If the function succeeds, the return value is the SubSession helper object. Otherwise returns nullptr. For more details, see \link ZoomVideoSDKSubSessionHelper \endlink.
+ */
+- (ZoomVideoSDKSubSessionHelper * _Nullable)getsubSessionHelper;
+
+/*!
+@brief Get the session type of this session.
+@return The session type.
+*/
+-(ZoomVideoSDKSessionType)getSessionType;
+
+
 
 @end

@@ -200,5 +200,9 @@
  @return YES indicates that the user is an incoming live stream, otherwise NO.
  */
 - (BOOL)isIncomingLiveStreamUser;
-
+/*!
+@brief Determine whether the user is in SubSession.
+@return True indicates that the user is an incoming live stream user, otherwise false.
+*/
+-(BOOL)isInSubSession;
 @end
