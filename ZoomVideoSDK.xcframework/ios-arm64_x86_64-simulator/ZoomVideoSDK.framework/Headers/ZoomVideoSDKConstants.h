@@ -427,7 +427,7 @@ typedef NS_ENUM(NSUInteger, ZoomVideoSDKRecordingStatus) {
     ZoomVideoSDKRecordingStatus_Start,
     /** The recording has stopped. */
     ZoomVideoSDKRecordingStatus_Stop,
-    /** Recording is unsuccessful due to insufficient storage space..Please try to:1.Free up storage space  2.Purchase additional storage space. */
+    /** Recording is unsuccessful due to insufficient storage space.Please try to:1.Free up storage space  2.Purchase additional storage space. */
     ZoomVideoSDKRecordingStatus_DiskFull,
     /** The recording has paused. */
     ZoomVideoSDKRecordingStatus_Pause,
@@ -496,7 +496,7 @@ typedef NS_ENUM(NSUInteger, ZoomVideoSDKLiveTranscriptionOperationType) {
 };
 
 /**
- * @brief Enumerates the types of device permission
+ * @brief Enumerates the types of device permission.
  */
 typedef NS_ENUM(NSUInteger, ZoomVideoSDKSystemPermissionType) {
     /** System permission - Camera is needed. */
@@ -842,4 +842,31 @@ typedef NS_ENUM(NSUInteger, ZoomVideoSDKSharePreprocessType) {
     ZoomVideoSDKSharePreprocessType_view,
 };
 
+/**
+ * @brief Enumeration of Zoom Video SDK share setting types.
+ */
+typedef NS_ENUM(NSUInteger, ZoomVideoSDKShareSetting)
+{
+    /** For initialization. */
+    ZoomVideoSDKShareSetting_None = 0,
+    /** Only host and manager can share. */
+    ZoomVideoSDKKShareSetting_LockedShare,
+    /** Anyone can share, but only one at a time. Only host and manager can take over. */
+    ZoomVideoSDKShareSetting_SingleShare,
+    /** Multiple participants can share simultaneously. */
+    ZoomVideoSDKShareSetting_MultiShare
+};
+
 #endif /* ZoomVideoSDKConstants_h */
+
+/**
+ * @brief Enumeration of preferred video resolution in Zoom Video SDK.
+ */
+typedef NS_ENUM(NSUInteger, ZoomVideoSDKPreferVideoResolution) {
+    /** Invalid value . */
+    ZoomVideoSDKPreferVideoResolution_None,
+    /** The camera opens in 360p by default. */
+    ZoomVideoSDKPreferVideoResolution_360P,
+    /** The camera opens in 720p by default. */
+    ZoomVideoSDKPreferVideoResolution_720P
+};

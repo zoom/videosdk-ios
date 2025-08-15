@@ -12,13 +12,13 @@
 @protocol ZoomVideoSDKShareSource;
 @protocol ZoomVideoSDKShareAudioSource;
 @protocol ZoomVideoSDKSharePreprocessor;
-/*!
- @class ZoomVideoSDKShareStatus
- @brief Share status of user
+/**
+ * @class ZoomVideoSDKShareStatus
+ * @brief Share status of user.
  */
 @interface ZoomVideoSDKShareStatus : NSObject
-/*!
- @brief The user's share status.
+/**
+ * @brief The user's share status.
  */
 @property (nonatomic, assign) ZoomVideoSDKReceiveSharingStatus  sharingStatus;
 
@@ -27,69 +27,76 @@
 @class ZoomVideoSDKVideoCanvas;
 @class ZoomVideoSDKRawDataPipe;
 
+/**
+ * @class ZoomVideoSDKShareAction
+ * @brief Share raw data pipe interface.
+ */
 @interface ZoomVideoSDKShareAction : NSObject
-/*!
-@brief Get share source ID.
-@return The user ID of the user object.
-*/
+/**
+ * @brief Get share source ID.
+ * @return The user ID of the user object.
+ */
 - (NSInteger)getShareSourceId;
-/*!
-@brief Get the render canvas object.
-@return If the function succeeds, the return value is the share render helper object. Otherwise, this function fails and returns NULL. For more details, see  {@link ZoomVideoSDKVideoCanvas}.
-*/
+/**
+ * @brief Get the render canvas object.
+ * @return If the function succeeds, the return value is the share render helper object. Otherwise, this function fails and returns NULL.
+ */
 - (ZoomVideoSDKVideoCanvas *_Nullable)getShareCanvas;
-/*!
-@brief Get the share status.
-@return Share status of the share object.
-*/
+/**
+ * @brief Get the share status.
+ * @return Share status of the share object.
+ */
 - (ZoomVideoSDKReceiveSharingStatus )getShareStatus;
-/*!
-@brief Get the share raw data pipe.
-@return The share pipe. For more information, see  {@link ZoomVideoSDKRawDataPipe}.
-*/
+/**
+ * @brief Get the share raw data pipe.
+ * @return The share pipe.
+ */
 - (ZoomVideoSDKRawDataPipe *_Nullable)getSharePipe;
-/*!
-@brief Get the subscribe fail reason.
-@return failed reason of the subscription.
-*/
+/**
+ * @brief Get the subscribe fail reason.
+ * @return failed reason of the subscription.
+ */
 - (ZoomVideoSDKSubscribeFailReason)getSubscribeFailReason;
-/*!
-@brief Determine whether annotation privilege is enabled.
-@return YES indicates that annotation privilege is enabled, otherwise false.
-*/
+/**
+ * @brief Determine whether annotation privilege is enabled.
+ * @return YES indicates that annotation privilege is enabled, otherwise false.
+ */
 - (BOOL)isAnnotationPrivilegeEnabled;
-/*!
-@brief Get the share type.
-@return Share type of the share object.
-*/
+/**
+ * @brief Get the share type.
+ * @return Share type of the share object.
+ */
 - (ZoomVideoSDKShareType)getShareType;
-/*!
-@brief Get the size of the share content.
-@return the size of share content.
+/**
+ * @brief Get the size of the share content.
+ * @return The size of share content.
  */
 - (CGSize)getShareSourceContentSize;
 
 @end
 
-/*!
- @class ZoomVideoSDKSharePreprocessParam
- @brief start pre-process share's parameter.
+/**
+ * @class ZoomVideoSDKSharePreprocessParam
+ * @brief start pre-process share's parameter.
  */
 @interface ZoomVideoSDKSharePreprocessParam : NSObject
 @property (nonatomic, assign)   ZoomVideoSDKSharePreprocessType type;
-@property (nonatomic, weak)     UIView *view; // the view to share and pre-process, no need pass when type is none.
+/**
+ * @brief the view to share and pre-process, no need pass when type is none.
+ */
+@property (nonatomic, weak)     UIView *view;
 @end
 
-/*!
- @class ZoomVideoSDKSharePreprocessParam
- @brief start pre-process share's parameter.
+/**
+ * @class ZoomVideoSDKSharePreprocessParam
+ * @brief Start pre-process share's parameter.
  */
 @interface ZoomVideoSDKSharePreprocessSender : NSObject
 
-/*!
- @brief Send preprocessed data.
- @param rawData The processed data object.
- @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see [ZoomVideoSDKError].
+/**
+ * @brief Send preprocessed data.
+ * @param rawData The processed data object.
+ * @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see [ZoomVideoSDKError].
  */
 - (ZoomVideoSDKError)sendPreprocessedData:(ZoomVideoSDKVideoRawData * _Nullable)rawData;
 
@@ -97,187 +104,181 @@
 
 
 
-/*!
- @class ZoomVideoSDKShareHelper
- @brief Share control interface.
+/**
+ * @class ZoomVideoSDKShareHelper
+ * @brief Share control interface.
  */
 @interface ZoomVideoSDKShareHelper : NSObject
 
-/*!
- @brief Share a selected view.
- @param view The view to be shared.
- @warning view, recommend to pass a single UIView's object, such as UIView, UIImageView or WKWebView.
- @warning It is not recommended to pass UIView after add subview WKWebView or UIImageView.
- @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see [ZoomVideoSDKError].
+/**
+ * @brief Share a selected view.
+ * @param view The view to be shared.
+ * @warning view, recommend to pass a single UIView's object, such as UIView, UIImageView or WKWebView.
+ * @warning It is not recommended to pass UIView after add subview WKWebView or UIImageView.
+ * @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see [ZoomVideoSDKError].
  */
 - (ZoomVideoSDKError)startShareWithView:(UIView * _Nullable)view;
 
-/*!
- @brief Share an external source.
- @param shareDelegate External share source,To get extended information, see {@link ZoomVideoSDKShareSource}.
- @param audioDelegate External share audio source,To get extended information, see {@link ZoomVideoSDKShareAudioSource}.
- @return If the function succeeds, it will return Errors_Success.Otherwise failed. To get extended error information, see [ZoomVideoSDKError].
- @warning   If audioDelegate is non-null, it means share user-defined audio at the same time.
+/**
+ * @brief Share an external source.
+ * @param shareDelegate External share source.
+ * @param audioDelegate External share audio source.
+ * @return If the function succeeds, it will return Errors_Success.Otherwise failed. To get extended error information, see [ZoomVideoSDKError].
+ * @warning   If audioDelegate is non-null, it means share user-defined audio at the same time.
+ * @deprecated Use startSharingExternalSource:andAudioSource:isPlaying: instead.
  */
 - (ZoomVideoSDKError)startSharingExternalSource:(id<ZoomVideoSDKShareSource> _Nullable)shareDelegate andAudioSource:(id <ZoomVideoSDKShareAudioSource> _Nullable)audioDelegate DEPRECATED_MSG_ATTRIBUTE("use startSharingExternalSource:andAudioSource:isPlaying: instead");
 
-/*!
- @brief Share an external source.
- @param shareDelegate External share source,To get extended information, see {@link ZoomVideoSDKShareSource}.
- @param audioDelegate External share audio source,To get extended information, see {@link ZoomVideoSDKShareAudioSource}.
- @param isPlaying YES to play shared audio raw data, false not to play.
- @return If the function succeeds, it will return Errors_Success.Otherwise failed. To get extended error information, see [ZoomVideoSDKError].
- @warning   If audioDelegate is non-null, it means share user-defined audio at the same time.
+/**
+ * @brief Share an external source.
+ * @param shareDelegate External share source.
+ * @param audioDelegate External share audio source.
+ * @param isPlaying YES to play shared audio raw data, false not to play.
+ * @return If the function succeeds, it will return Errors_Success.Otherwise failed. To get extended error information, see [ZoomVideoSDKError].
+ * @warning   If audioDelegate is non-null, it means share user-defined audio at the same time.
  */
 - (ZoomVideoSDKError)startSharingExternalSource:(id<ZoomVideoSDKShareSource> _Nullable)shareDelegate andAudioSource:(id <ZoomVideoSDKShareAudioSource> _Nullable)audioDelegate isPlaying:(BOOL)isPlaying;
 
 /**
- @brief Enable or disable local playback of shared audio raw data.
- @param bPlay YES to play shared audio raw data, NO not to play it.
- @return If the function succeeds, it will return Errors_Success. Otherwise failed. To get extended error information, see {@link ZoomVideoSDKError}.
+ * @brief Enable or disable local playback of shared audio raw data.
+ * @param bPlay YES to play shared audio raw data, NO not to play it.
+ * @return If the function succeeds, it will return Errors_Success. Otherwise failed.
  */
 - (ZoomVideoSDKError)enablePlaySharingAudioRawdata:(BOOL)bPlay;
 
-/*!
- @brief Stop view or screen share.
- @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see {@link ZoomVideoSDKError}.
+/**
+ * @brief Stop view or screen share.
+ * @return If the function succeeds, the return value is Errors_Success. Otherwise failed.
  */
 - (ZoomVideoSDKError)stopShare;
 
 /**
- @brief Pause share. For camera share, the presenter can pause the share to support annotation.
- @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see {@link ZoomVideoSDKError}.
+ * @brief Pause share. For camera share, the presenter can pause the share to support annotation.
+ * @return If the function succeeds, the return value is Errors_Success. Otherwise failed.
  */
 - (ZoomVideoSDKError)pauseShare;
 
 /**
- @brief Resume share. For camera share, the presenter can restart the camera share.
- @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see {@link ZoomVideoSDKError}.
+ * @brief Resume share. For camera share, the presenter can restart the camera share.
+ * @return If the function succeeds, the return value is Errors_Success. Otherwise failed.
  */
 - (ZoomVideoSDKError)resumeShare;
 
-/*!
- @brief Lock sharing the view or screen. Only the host can call this method.
- @param lock YES to lock sharing.
- @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see {@link ZoomVideoSDKError}.
- @warning Only Host/Manger can call the function.
+/**
+ * @brief Lock sharing the view or screen. Only the host can call this method.
+ * @param lock YES to lock sharing.
+ * @return If the function succeeds, the return value is Errors_Success. Otherwise failed.
+ * @warning Only Host/Manger can call the function.
  */
 - (ZoomVideoSDKError)lockShare:(BOOL)lock;
 
-/*!
- @brief Determine whether sharing the view or screen is locked.
- @return YES indicates that sharing is locked, otherwise NO.
+/**
+ * @brief Determine whether sharing the view or screen is locked.
+ * @return YES indicates that sharing is locked, otherwise NO.
  */
 - (BOOL)isShareLocked;
 
-/*!
- @brief Determine whether the current user is sharing.
- @return YES indicates the current user is sharing, otherwise NO.
+/**
+ * @brief Determine whether the current user is sharing.
+ * @return YES indicates the current user is sharing, otherwise NO.
  */
 - (BOOL)isSharingOut;
 
-/*!
- @brief Determine whether other user is sharing.
- @return YES indicates another user is sharing, otherwise NO.
+/**
+ * @brief Determine whether other user is sharing.
+ * @return YES indicates another user is sharing, otherwise NO.
  */
 - (BOOL)isOtherSharing;
 
-/*!
- @brief Determine whether the current user is sharing the screen.
- @return YES indicates the current user is sharing the screen, otherwise NO.
+/**
+ * @brief Determine whether the current user is sharing the screen.
+ * @return YES indicates the current user is sharing the screen, otherwise NO.
  */
 - (BOOL)isScreenSharingOut;
 
-/*!
- @brief Determine if the SDK has enabled share device audio when screen sharing.
- @return The result of it.
+/**
+ * @brief Determine if the SDK has enabled share device audio when screen sharing.
+ * @return The result of it.
  */
 - (BOOL)isShareDeviceAudioEnabled;
 
-/*!
- @brief Enable or disable the device audio  shared together when screen sharing.
- @param enable share audio out or not.
- @return The result of it.
+/**
+ * @brief Enable or disable the device audio  shared together when screen sharing.
+ * @param enable share audio out or not.
+ * @return The result of it.
  */
 - (BOOL)enableShareDeviceAudio:(BOOL)enable;
 
-/*!
- @brief Whether annotation feature is supported or not.
- @return The result of it.
+/**
+ * @brief Whether annotation feature is supported or not.
+ * @return The result of it.
  */
 - (BOOL)isAnnotationFeatureSupport;
 
-/*!
- @brief Disable or enable viewer’s annotation by the share owner.
- @param disable YES means annotation is disabled, NO means it is enabled.
- @return the result of this.
- @warning Only the share owner can call this function.
+/**
+ * @brief Disable or enable viewer’s annotation by the share owner.
+ * @param disable YES means annotation is disabled, NO means it is enabled.
+ * @return The result of this.
+ * @warning Only the share owner can call this function.
  */
 - (ZoomVideoSDKError)disableViewerAnnotation:(BOOL)disable;
 
-/*!
- @brief Whether annotation on current sharing is disabled or not.
- @return the result of this.
- @warning Only the share owner can call this function.
+/**
+ * @brief Whether annotation on current sharing is disabled or not.
+ * @return The result of this.
+ * @warning Only the share owner can call this function.
  */
 - (BOOL)isViewerAnnotationDisabled;
 
-/*!
- @brief Creates annotation helper based on shared view.
- @param view the shared view. Pass the nil will return the helper for self sharing.
- @return The result of it.
- @warning The view passed in this function should be subscribed share view. And if the share view aspect mode is full fill, the annotate not supported. When the share owner not  support the feature of annotate, the others should not do annotate in that case.
+/**
+ * @brief Creates annotation helper based on shared view.
+ * @param view the shared view. Pass the nil will return the helper for self sharing.
+ * @return The result of it.
+ * @warning The view passed in this function should be subscribed share view. And if the share view aspect mode is full fill, the annotate not supported. When the share owner not  support the feature of annotate, the others should not do annotate in that case.
  */
 - (ZoomVideoSDKAnnotationHelper * _Nullable)createAnnotationHelper:(UIView * _Nullable)view;
 
-/*!
- @brief Destroys annotation helper.
- @param helper ZoomVideoSDKAnnotationHelper.
- @return The result of it.
+/**
+ * @brief Destroys annotation helper.
+ * @param helper ZoomVideoSDKAnnotationHelper.
+ * @return The result of it.
  */
 - (ZoomVideoSDKError)destroyAnnotationHelper:(ZoomVideoSDKAnnotationHelper * _Nullable)helper;
 
-/*!
- @brief Enable or disable participants can share simultaneously.
- @param enable True to enable. False to disable.
- @return If the function succeeds, the return value is Errors_Success.
- @warning When you switch multi share from enable to disable, all sharing will be stopped
+/**
+ * @brief Enable or disable participants can share simultaneously.
+ * @param enable True to enable. False to disable.
+ * @return If the function succeeds, the return value is Errors_Success.
+ * @warning When you switch multi share from enable to disable, all sharing will be stopped.
  */
 - (ZoomVideoSDKError)enableMultiShare:(BOOL)enable;
 
-/*!
- @brief Determine whether multi share is enabled or not..
- @return true enabled, false not enabled.
+/**
+ * @brief Determine whether multi share is enabled or not.
+ * @return YES enabled, NO not enabled.
  */
 - (BOOL)isMultiShareEnabled;
 
 #pragma mark - share camera and anno -
-/*!
- @brief Share the select camera. Query the select camera using {@link ZoomVideoSDKVideoHelper#getCameraDeviceList}.
- The presenter can use {@link #pauseShare} to enable viewer annotation.
- If the camera is paused, the presenter can use {@link #resumeShare} to resume.
- Notice: The user should start video before start share camera,
- otherwise the error {@link ZoomVideoSDKErrors#Errors_Session_Share_Camera_Video_Not_Start}.
-
- @param parentView the share view to show the camera for the presenter.
- @return If the function succeeds, the return value is Errors_Success.
- Otherwise failed. To get extended error information, see {@link ZoomVideoSDKErrors}.
+/**
+ * @brief Share the select camera. Query the select camera using \link ZoomVideoSDKVideoHelper::getCameraDeviceList \endlink.
+ * @param parentView the share view to show the camera for the presenter.
+ * @return If the function succeeds, the return value is Errors_Success. Otherwise failed.
+ * @note The presenter can use \link ZoomVideoSDKShareHelper::pauseShare \endlink to enable viewer annotation. If the camera is paused, the presenter can use \link ZoomVideoSDKShareHelper::resumeShare \endlink to resume. Notice: The user should start video before start share camera, otherwise the error \link Errors_Session_Share_Camera_Video_Not_Start \endlink.
  */
 - (ZoomVideoSDKError)startShareCamera:(UIView *_Nullable)parentView;
 
 
 #pragma mark - share with pre-process -
-/*!
- @brief Start share preprocessing.
- @param param The share preprocessing parameters. See {@link ZoomVideoSDKSharePreprocessParam}.
- @param preprocessor Object that handles preprocessing events.
- @return If the function succeeds, the return value is ZoomVideoSDKErrors_Success.
- Otherwise this function fails. To get extended error information, see  {@link ZoomVideoSDKErrors} enum.
- @notes If pAudioSource is non-null, it means share user-defined audio at the same time.
- @notes This share type should using the CptShare.framework, zm_annoter_dynamic.framework
+/**
+ * @brief Start share preprocessing.
+ * @param param The share preprocessing parameters.
+ * @param preprocessor Object that handles preprocessing events.
+ * @return If the function succeeds, the return value is ZoomVideoSDKErrors_Success. Otherwise this function fails. To get extended error information, see \link ZoomVideoSDKErrors \endlink enum.
+ * @note If pAudioSource is non-null, it means share user-defined audio at the same time.
+ * @note This share type should using the CptShare.framework, zm_annoter_dynamic.framework.
  */
 - (ZoomVideoSDKError)startShareWithPreprocessing:(ZoomVideoSDKSharePreprocessParam * _Nullable)param sharePreprocessor:(id<ZoomVideoSDKSharePreprocessor> _Nullable)preProcessDelegate;
-
 @end
 
 

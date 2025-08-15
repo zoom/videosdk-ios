@@ -8,21 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-/*!
- @class ZoomVideoSDKVideoCapability
- @brief Capabilitiy infomation of video source.
+/**
+ * @class ZoomVideoSDKVideoCapability
+ * @brief Capabilitiy infomation of video source.
  */
 @interface ZoomVideoSDKVideoCapability : NSObject
-/*!
- @brief width of video.
+/**
+ * @brief width of video.
  */
 @property (nonatomic, assign) int width;
-/*!
- @brief height of video.
+/**
+ * @brief height of video.
  */
 @property (nonatomic, assign) int height;
-/*!
- @brief frame rate of video.
+/**
+ * @brief frame rate of video.
  */
 @property (nonatomic, assign) int frame;
 
