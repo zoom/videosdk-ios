@@ -11,13 +11,13 @@
 
 @interface ZoomVideoSDKScreenShareServiceInitParams : NSObject
 
-/*!
- @brief If you use screen share, you need create group id in your apple developer account, and setup here.
+/**
+ * @brief If you use screen share, you need create group id in your apple developer account, and setup here.
  */
 @property (nonatomic, copy) NSString * _Nullable appGroupId;
 
-/*!
- @brief Share option, YES: share device sound when share screen, otherwise not..
+/**
+ * @brief Share option, YES: share device sound when share screen, otherwise not..
  */
 @property (nonatomic, assign) BOOL isWithDeviceAudio;
 
@@ -30,9 +30,9 @@
 
 @end
 
-/*!
- @brief Screen share service.
- @warning If main target use virtual audio speaker, screen share only share the video data，can't share the audio data.
+/**
+ * @brief Screen share service.
+ * @warning If main target use virtual audio speaker, screen share only share the video data，can't share the audio data.
  */
 @interface ZoomVideoSDKScreenShareService : NSObject
 
