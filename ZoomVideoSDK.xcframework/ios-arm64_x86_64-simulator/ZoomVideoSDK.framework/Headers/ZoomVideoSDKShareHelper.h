@@ -266,19 +266,48 @@
  * @return If the function succeeds, the return value is Errors_Success. Otherwise failed.
  * @note The presenter can use \link ZoomVideoSDKShareHelper::pauseShare \endlink to enable viewer annotation. If the camera is paused, the presenter can use \link ZoomVideoSDKShareHelper::resumeShare \endlink to resume. Notice: The user should start video before start share camera, otherwise the error \link Errors_Session_Share_Camera_Video_Not_Start \endlink.
  */
-- (ZoomVideoSDKError)startShareCamera:(UIView *_Nullable)parentView;
+- (ZoomVideoSDKError)startShareCamera:(UIView *_Nullable)parentView  API_UNAVAILABLE(visionos);
 
 
 #pragma mark - share with pre-process -
 /**
  * @brief Start share preprocessing.
  * @param param The share preprocessing parameters.
- * @param preprocessor Object that handles preprocessing events.
+ * @param preProcessDelegate Object that handles preprocessing events.
  * @return If the function succeeds, the return value is ZoomVideoSDKErrors_Success. Otherwise this function fails. To get extended error information, see \link ZoomVideoSDKErrors \endlink enum.
  * @note If pAudioSource is non-null, it means share user-defined audio at the same time.
  * @note This share type should using the CptShare.framework, zm_annoter_dynamic.framework.
  */
 - (ZoomVideoSDKError)startShareWithPreprocessing:(ZoomVideoSDKSharePreprocessParam * _Nullable)param sharePreprocessor:(id<ZoomVideoSDKSharePreprocessor> _Nullable)preProcessDelegate;
+
+/**
+ * @brief Apply a UIImage overlay to the shared image stream when using (when you share with {@link  startShareWithPreprocessing:sharePreprocessor:} or {@link startInAppScreenShare}). Use this method to cover the shared content with an image during preprocessing.
+ * @param image The UIImage to overlay on top of the shared image. The UIImage is fully coverd the current share frame before it is sent to viewers.
+ * @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see {@link ZoomVideoSDKError}.
+ */
+- (ZoomVideoSDKError)applyPreprocessingOverlayImage:(UIImage *_Nullable)image;
+
+/**
+ * @brief Remove the currently applied UIImage overlay from the shared image stream when using (when you share with {@link  startShareWithPreprocessing:sharePreprocessor:}  or {@link startInAppScreenShare}).
+ * @note Once removed, the raw shared content is sent directly to viewers without any overlay. Call this method when you no longer need to display the overlay (for example, when a covered image is no longer required).
+ */
+- (void)removePreprocessingOverlayImage;
+
+#pragma mark - in-app screen share -
+
+/*!
+ * @brief Check that the system supports in-app screen share or not.
+ * @return return whether the device supports in-app screen share or not. Please refer to {@link RPScreenRecorder}.
+ */
+- (BOOL)isSupportInAppScreenShare;
+
+/*!
+ * @brief Start in-app screen share.
+ * @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see {@link ZoomVideoSDKError}.
+ * @warning Can only be called once every 500ms.
+ */
+- (ZoomVideoSDKError)startInAppScreenShare;
+
 @end
 
 

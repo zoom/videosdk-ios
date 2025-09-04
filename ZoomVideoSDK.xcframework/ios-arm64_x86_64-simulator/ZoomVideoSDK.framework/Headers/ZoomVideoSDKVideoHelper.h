@@ -178,7 +178,7 @@
 /**
  * @brief Switch to the next available camera.
  */
-- (void)switchCamera;
+- (void)switchCamera API_UNAVAILABLE(visionos);
 
 /**
  * @brief Get the camera device list.
@@ -192,7 +192,7 @@
  * @param cameraId The target camera ID.
  * @return Yes means it successfully switched camera, otherwise not.
  */
-- (BOOL)switchCamera:(NSString * _Nullable)cameraId;
+- (BOOL)switchCamera:(NSString * _Nullable)cameraId API_UNAVAILABLE(visionos);
 
 /**
  * @brief Get the current camera device in use.
@@ -283,7 +283,7 @@
  * @brief Determine if the current device(phone, pad) support the multi camera feature or not.
  * @return If the function succeeds, it will return YES, otherwise it returns NO.
  */
-- (BOOL)isMultiStreamSupported;
+- (BOOL)isMultiStreamSupported API_UNAVAILABLE(visionos);
 
 /**
  * @brief Enable multiple video stream support if you have multiple cameras and other participants can see multiple videos of you.
@@ -292,28 +292,28 @@
  * @return If the function succeeds, it will return YES, otherwise it returns NO.
  * @warning Only two cameras can open at the same time.
  */
-- (BOOL)enableMultiStreamVideo:(NSString * _Nullable)cameraDeviceID customDeviceName:(NSString * _Nullable)customDeviceName;
+- (BOOL)enableMultiStreamVideo:(NSString * _Nullable)cameraDeviceID customDeviceName:(NSString * _Nullable)customDeviceName API_UNAVAILABLE(visionos);
 
 /**
  * @brief Disable the multiple video stream.
  * @param cameraDeviceID The camera ID that you want to disable. See @{ZoomVideoSDKCameraDevice}.
  * @return If the function succeeds, it will return YES, otherwise it returns NO.
  */
-- (BOOL)disableMultiStreamVideo:(NSString * _Nullable)cameraDeviceID;
+- (BOOL)disableMultiStreamVideo:(NSString * _Nullable)cameraDeviceID API_UNAVAILABLE(visionos);
 
 /**
  * @brief Turn off the multiple video stream.
  * @param cameraDeviceID The camera ID running as a multiple camera. See @{ZoomVideoSDKCameraDevice}.
  * @return If the function succeeds, it will return YES, otherwise it returns NO.
  */
-- (BOOL)muteMultiStreamVideo:(NSString * _Nullable)cameraDeviceID;
+- (BOOL)muteMultiStreamVideo:(NSString * _Nullable)cameraDeviceID API_UNAVAILABLE(visionos);
 
 /**
  * @brief Turn on the multiple video stream.
  * @param cameraDeviceID The camera ID running as a multiple camera. See @{ZoomVideoSDKCameraDevice}.
  * @return If the function succeeds, it will return YES, otherwise it returns NO.
  */
-- (BOOL)unmuteMultiStreamVideo:(NSString * _Nullable)cameraDeviceID;
+- (BOOL)unmuteMultiStreamVideo:(NSString * _Nullable)cameraDeviceID API_UNAVAILABLE(visionos);
 
 /**
  * @brief Get the device ID associated with my multi-camera pipe.

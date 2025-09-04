@@ -23,6 +23,7 @@
 #import <ZoomVideoSDK/ZoomVideoSDKLiveTranscriptionHelper.h>
 #import <ZoomVideoSDK/ZoomVideoSDKFileTranserHandle.h>
 #import <ZoomVideoSDK/ZoomVideoSDKSubSessionHelper.h>
+#import <ReplayKit/ReplayKit.h>
 
 @class ZoomVideoSDKRawDataPipe;
 @class ZoomVideoSDKVideoCanvas;
@@ -136,7 +137,7 @@
  * @param msgID The deleted message's ID.
  * @param type Indicates by whom the message was deleted, which is defined in [ZoomVideoSDKChatMsgDeleteBy].
  */
-- (void)onChatMsgDeleteNotification:(ZoomVideoSDKChatHelper * _Nullable)helper messageID:(NSString * __nonnull)msgID deleteBy:(ZoomVideoSDKChatMsgDeleteBy) type;
+- (void)onChatMsgDeleteNotification:(ZoomVideoSDKChatHelper * _Nullable)helper messageID:(NSString * _Nonnull)msgID deleteBy:(ZoomVideoSDKChatMsgDeleteBy)type;
 
 /**
  * @brief Callback: Invoked when the session host changes.
@@ -275,6 +276,14 @@
  * @param speakerVolume Specify the volume of the speaker when testing.
  */
 - (void)onMicSpeakerVolumeChanged:(int)micVolume speakerVolume:(int)speakerVolume;
+
+/**
+ * @brief Notify the audio level change of other participants in the session.
+ * @param level The current audio level of the user, in the range [0, 9].
+ * @param bAudioSharing The audio level is from audio sharing or microphone input.
+ * @param user The user whose audio level has changed.
+ */
+- (void)onAudioLevelChanged:(NSUInteger)level audioSharing:(BOOL)bAudioSharing user:(ZoomVideoSDKUser * _Nullable)user;
 
 /**
  * @brief Callback: Invoked when the SDK requires system permissions to continue functioning.
@@ -528,6 +537,25 @@
  */
 - (void)onSubSessionUserHelpRequestResult:(ZoomVideoSDKUserHelpRequestResult)result;
 
+#pragma mark - ZoomVideoSDK audio source change -
+/**
+ * @brief Sink the event that the output type of the current user's audio source changes.
+ * @param device Audio types defined in {@link ZoomVideoSDKAudioDevice}.
+ */
+- (void)onMyAudioSourceTypeChanged:(ZoomVideoSDKAudioDevice *_Nullable)device;
+
+#pragma mark - In app screen share -
+/**
+ * @brief Called when in-app screen sharing session encounters an error or success.
+ * @param code Error code in {@link RPRecordingErrorCode}.
+ */
+- (void)onInAppScreenShareErrorCode:(RPRecordingErrorCode)code;
+
+/**
+ * @brief Called when the availablity of in-app screen sharing changes. Use this callback to enable or disable screen sharing controls in your UI based on current availability.
+ * @param available Available or not {@link RPScreenRecorder}.
+ */
+- (void)onInAppScreenShareAvailableChanged:(BOOL)available;
 
 @end
 
