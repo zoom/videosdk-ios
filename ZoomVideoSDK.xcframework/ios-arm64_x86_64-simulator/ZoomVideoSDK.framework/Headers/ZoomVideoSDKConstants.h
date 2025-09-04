@@ -108,6 +108,8 @@ typedef NS_ENUM(NSUInteger,ZoomVideoSDKError)
     Errors_Session_Client_Incompatible,
     /** Free minutes exceeded. */
     Errors_Session_Account_FreeMinutesExceeded,
+    /** Join session failed because the account's free credit has been exceeded. */
+    Errors_Session_Account_FreeCreditExceeded,
 
     /** Audio errors. */
     /** General audio error. */
@@ -183,6 +185,10 @@ typedef NS_ENUM(NSUInteger,ZoomVideoSDKError)
     Errors_Rawdata_Send_Too_Frequently,
     /** Virtual microphone has been terminated. */
     Errors_Rawdata_Virtual_Mic_Is_Terminate,
+    /** The share preprocessing data object is invalid. */
+    Errors_Rawdata_Invalid_Share_Preprocessing_Data_Object,
+    /** Share preprocessing has stopped. */
+    Errors_Rawdata_Share_Preprocessing_Is_Stopped,
 
     /** Session sharing errors. */
     /** General sharing error. */
