@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKTestAudioDeviceHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2022/6/20.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKTestAudioDeviceHelper.h
+ * @brief Interface for audio device testing including microphone recording and speaker playback testing.
+ */
 
 #import <Foundation/Foundation.h>
 

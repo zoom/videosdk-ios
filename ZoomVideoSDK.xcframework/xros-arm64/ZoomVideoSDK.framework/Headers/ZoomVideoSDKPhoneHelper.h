@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKPhoneHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2021/12/21.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKPhoneHelper.h
+ * @brief Interface for phone invitation operations including dial-in/dial-out functionality and country information management.
+ */
 
 #import <Foundation/Foundation.h>
 

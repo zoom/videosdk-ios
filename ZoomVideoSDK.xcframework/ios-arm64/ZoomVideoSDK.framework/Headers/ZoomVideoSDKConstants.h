@@ -1,7 +1,7 @@
-//
-//  ZoomVideoSDKConstants.h
-//  ZoomVideoSDK
-//
+/**
+ * @file ZoomVideoSDKConstants.h
+ * @brief Definitions of all constants, enumerations, and error codes used throughout the Zoom Video SDK.
+ */
 #ifndef ZoomVideoSDKConstants_h
 #define ZoomVideoSDKConstants_h
 
@@ -118,6 +118,8 @@ typedef NS_ENUM(NSUInteger,ZoomVideoSDKError)
     Errors_Session_Audio_No_Microphone,
     /** No speaker detected. */
     Errors_Session_Audio_No_Speaker,
+    /** Bluetooth sco connect fail. Android Only. */
+    Errors_Session_Bluetooth_SCO_Connection_Failed,
 
     /** Video errors. */
     /** General video error. */
@@ -137,6 +139,8 @@ typedef NS_ENUM(NSUInteger,ZoomVideoSDKError)
     Errors_Fail_Assign_User_Privilege,
     /** No recording in progress. */
     Errors_No_Recording_In_Process,
+    /** Recording is connecting. */
+    Errors_Recording_Is_Connecting,
     /** Failed to set virtual background. */
     Errors_Set_Virtual_Background_Fail,
 
@@ -205,7 +209,8 @@ typedef NS_ENUM(NSUInteger,ZoomVideoSDKError)
     Errors_Session_Share_Camera_Video_Not_Start,
     /** Camera conflicts with video effects. */
     Errors_Session_Share_Camera_Conflict_With_Video_Effects,
-
+    /** Share conflicts with whiteboard share. */
+    Errors_Session_Share_Conflict_With_Whiteboard,
     /** File transfer errors. */
     /** Unknown file transfer error. */
     Errors_Session_Filetransfer_UnknownError = 7500,
@@ -659,6 +664,18 @@ typedef NS_ENUM(NSUInteger,ZoomVideoSDKAnnotationToolType) {
     ZoomVideoSDKAnnotationToolType_AutoStampHeart,
     /** A sign for interrogation. */
     ZoomVideoSDKAnnotationToolType_AutoStampQm,
+    /** An vanishing pen. */
+    ZoomVideoSDKAnnotationToolType_VanishingPen,
+    /** An vanishing arrow. */
+    ZoomVideoSDKAnnotationToolType_VanishingArrow,
+    /** An vanishing double-arrow. */
+    ZoomVideoSDKAnnotationToolType_VanishingDoubleArrow,
+    /** An vanishing diamond. */
+    ZoomVideoSDKAnnotationToolType_VanishingDiamond,
+    /** An vanishing ellipse. */
+    ZoomVideoSDKAnnotationToolType_VanishingEllipse,
+    /** An vanishing rectangle. */
+    ZoomVideoSDKAnnotationToolType_VanishingRectangle,
 };
 
 /**
@@ -856,14 +873,95 @@ typedef NS_ENUM(NSUInteger, ZoomVideoSDKShareSetting)
     /** For initialization. */
     ZoomVideoSDKShareSetting_None = 0,
     /** Only host and manager can share. */
-    ZoomVideoSDKKShareSetting_LockedShare,
+    ZoomVideoSDKShareSetting_LockedShare,
     /** Anyone can share, but only one at a time. Only host and manager can take over. */
     ZoomVideoSDKShareSetting_SingleShare,
     /** Multiple participants can share simultaneously. */
     ZoomVideoSDKShareSetting_MultiShare
 };
 
-#endif /* ZoomVideoSDKConstants_h */
+/**
+ * @brief Streaming join status enumeration.
+ */
+
+typedef NS_ENUM(NSUInteger, ZoomVideoSDKStreamingJoinStatus) {
+    /** IInitialized status. */
+    ZoomVideoSDKStreamingJoinStatus_None,
+
+    /** Connecting to streaming. */
+    ZoomVideoSDKStreamingJoinStatus_Connecting,
+
+    /** Jjoined streaming. */
+    ZoomVideoSDKStreamingJoinStatus_Joined,
+
+    /** Disconnecting from streaming. */
+    ZoomVideoSDKStreamingJoinStatus_Disconnecting,
+
+    /** Reconnecting from streaming. */
+    ZoomVideoSDKStreamingJoinStatus_Reconnecting,
+
+    /** Join failed. */
+    ZoomVideoSDKStreamingJoinStatus_Failed,
+
+    /** Left streaming. */
+    ZoomVideoSDKStreamingJoinStatus_Left
+};
+
+/**
+ * @brief Enumerations of broadcast control status.
+ */
+typedef NS_ENUM(NSUInteger, ZoomVideoSDKBroadcastControlStatus) {
+    /**  Initialized status. */
+    ZoomVideoSDKBroadcastControlStatus_None,
+
+    /** Broadcast is starting. */
+    ZoomVideoSDKBroadcastControlStatus_Starting,
+    
+    /** Broadcast is started. */
+    ZoomVideoSDKBroadcastControlStatus_Started,
+    
+    /** Broadcast is stopping. */
+    ZoomVideoSDKBroadcastControlStatus_Stopping,
+    
+    /** Broadcast is stopped. */
+    ZoomVideoSDKBroadcastControlStatus_Stopped
+};
+
+/**
+ * @brief Enumeration of supported export formats for content, like whiteboard.
+ */
+typedef NS_ENUM(NSUInteger,ZoomVideoSDKWhiteboardExportFormatType)
+{
+    /** Export the content as a PDF document. */
+    ZoomVideoSDKWhiteboardExport_Format_PDF,
+};
+
+
+/**
+ * @brief Enumeration of the status of whiteboard sharing.
+ */
+typedef NS_ENUM(NSUInteger,ZoomVideoSDKWhiteboardStatus)
+{
+    /** The whiteboard has started. */
+    ZoomVideoSDKWhiteboardStatus_Started,
+
+    /** The whiteboard has stopped. */
+    ZoomVideoSDKWhiteboardStatus_Stopped
+};
+
+/**
+ * @brief Enumerates the data type for network quality monitoring.
+ */
+typedef NS_ENUM(NSUInteger, ZoomVideoSDKDataType) {
+    /** Unknown data type. */
+    ZoomVideoSDKDataType_Unknown,
+    /** Audio data type. */
+    ZoomVideoSDKDataType_Audio,
+    /** Video data type. */
+    ZoomVideoSDKDataType_Video,
+    /** Share data type. */
+    ZoomVideoSDKDataType_Share
+};
 
 /**
  * @brief Enumeration of preferred video resolution in Zoom Video SDK.
@@ -876,3 +974,30 @@ typedef NS_ENUM(NSUInteger, ZoomVideoSDKPreferVideoResolution) {
     /** The camera opens in 720p by default. */
     ZoomVideoSDKPreferVideoResolution_720P
 };
+
+
+/**
+ * @class ZoomVideoSDKLiveStreamLayout
+ * @brief Enumeration of live stream layout types.
+ */
+typedef NS_ENUM(NSInteger, ZoomVideoSDKLiveStreamLayout) {
+    /** Speaker view layout for live stream. */
+    ZoomVideoSDKLiveStreamLayout_SpeakerView = 1,
+    /** Gallery view layout for live stream. */
+    ZoomVideoSDKLiveStreamLayout_GalleryView
+};
+
+/**
+ * @class ZoomVideoSDKLiveStreamCloseCaption
+ * @brief Enumeration of live stream close caption options.
+ */
+typedef NS_ENUM(NSInteger, ZoomVideoSDKLiveStreamCloseCaption) {
+    /** Close caption is disabled. */
+    ZoomVideoSDKLiveStreamCloseCaption_OFF = 0,
+    /** Close caption is burnt into the video stream. */
+    ZoomVideoSDKLiveStreamCloseCaption_BurntIn,
+    /** Close caption is embedded in the stream data. */
+    ZoomVideoSDKLiveStreamCloseCaption_Embedded
+};
+
+#endif /* ZoomVideoSDKConstants_h */

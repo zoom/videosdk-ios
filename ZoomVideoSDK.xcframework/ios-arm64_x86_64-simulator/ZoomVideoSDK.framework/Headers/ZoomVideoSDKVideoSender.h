@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKVideoSender.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2020/3/9.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKVideoSender.h
+ * @brief Interface for sending custom video data through external video source protocols.
+ */
 
 #import <Foundation/Foundation.h>
 /**

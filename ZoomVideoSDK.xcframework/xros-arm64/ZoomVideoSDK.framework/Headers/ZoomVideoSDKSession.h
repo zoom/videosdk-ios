@@ -1,4 +1,7 @@
-
+/**
+ * @file ZoomVideoSDKSession.h
+ * @brief Interface for session management operations including session properties, user management, and file transfer.
+ */
 
 #import <Foundation/Foundation.h>
 #import <ZoomVideoSDK/ZoomVideoSDKUser.h>
@@ -125,63 +128,75 @@
 
 /**
  * @brief Get the session's name.
+ * @return The session's name.
  */
 - (NSString * _Nullable)getSessionName;
 
 /**
  * @brief Get the session Id.
+ * @return The session Id.
  * @warning Only the host can get the session Id.
  */
 - (NSString * _Nullable)getSessionID;
 
 /**
  * @brief Get the session number.
+ * @return The session number.
  * @warning get the session number.
  */
 - (unsigned long long)getSessionNumber;
 
 /**
  * @brief Get the session's password.
+ * @return The session's password.
  */
 - (NSString * _Nullable)getSessionPassword;
 
 /**
  * @brief Get the session phone passcode.
+ * @return The session phone passcode.
  * @warning get the session phone passcode.
  */
 - (NSString * _Nullable)getSessionPhonePasscode;
 
 /**
  * @brief Get the host's name.
+ * @return The host's name.
  */
 - (NSString * _Nullable)getSessionHostName;
 
 /**
  * @brief Get the session's host user object.
+ * @return The session's host user object.
  */
 - (ZoomVideoSDKUser * _Nullable)getSessionHost;
 
 /**
  * @brief Get a list of the session's remote users.
+ * @return The list of the session's remote users.
  */
 - (NSArray <ZoomVideoSDKUser *>* _Nullable)getRemoteUsers;
 
 /**
  * @brief Get the session's user object for myself.
+ * @return The session's user object for myself.
  */
 - (ZoomVideoSDKUser * _Nullable)getMySelf;
 
 /**
  * @brief Get the session's audio statistic information.
+ * @return  If the function succeeds, it will return a session audio statistic infomation object, otherwise returns nil.
  */
 - (ZoomVideoSDKSessionAudioStatisticInfo * _Nullable)getSessionAudioStatisticInfo;
 
 /**
  * @brief Get the session's video statistic information.
+ * @return The session's video statistic information.
  */
 - (ZoomVideoSDKSessionASVStatisticInfo * _Nullable)getSessionVideoStatisticInfo;
 /**
  * @brief Get the session's screen share statistic information.
+ * @return The session's screen share statistic information.
  */
 - (ZoomVideoSDKSessionASVStatisticInfo * _Nullable)getSessionShareStatisticInfo;
 

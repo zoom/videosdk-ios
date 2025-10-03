@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKVirtualBackgroundHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2022/12/16.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKVirtualBackgroundHelper.h
+ * @brief Interface for virtual background operations including adding, setting, and managing virtual background images and blur effects.
+ */
 
 #import <Foundation/Foundation.h>
 

@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKUserHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2018/12/7.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKUserHelper.h
+ * @brief Interface for user management operations including changing names, assigning roles, and removing users from sessions.
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -45,7 +42,7 @@
  * @return YES indicates that the user no longer has manager rights. Otherwise, this function returns NO.
  * @warning only session host can run this function, and userId should not be myself.
  */
-- (BOOL)revokeManager:(ZoomVideoSDKUser * _Nullable)user;
+- (ZoomVideoSDKError)revokeManager:(ZoomVideoSDKUser * _Nullable)user;
 
 /**
  * @brief Remove user from session.

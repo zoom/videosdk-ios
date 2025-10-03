@@ -1,7 +1,7 @@
-//
-//  ZoomVideoSDK.h
-//  ZoomVideoSDK
-//
+/**
+ * @file ZoomVideoSDK.h
+ * @brief Main Zoom Video SDK interface providing session management, initialization, and access to all helper modules.
+ */
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
@@ -29,10 +29,11 @@
 #import <ZoomVideoSDK/ZoomVideoSDKMaskHelper.h>
 #import <ZoomVideoSDK/ZoomVideoSDKRemoteCameraControlHelper.h>
 #import <ZoomVideoSDK/ZoomVideoSDKSubSessionHelper.h>
-
+#import <ZoomVideoSDK/ZoomVideoSDKWhiteboardHelper.h>
+#import <ZoomVideoSDK/ZoomVideoSDKBroadcastStreamingHelper.h>
 /**
- * @class ZoomVideoSDKExtendParams
- * @brief ZoomVideoSDK extend params.
+ @class ZoomVideoSDKExtendParams
+ @brief ZoomVideoSDK extend params.
  */
 @interface ZoomVideoSDKExtendParams : NSObject
 /**
@@ -40,6 +41,9 @@
  */
 @property (nonatomic, copy) NSString * _Nullable speakerTestFilePath;
 
+/**
+ * @brief Wrapper type.
+ */
 @property (nonatomic, assign) NSInteger wrapperType;
 
 /**
@@ -221,8 +225,8 @@
 - (ZoomVideoSDKError)initialize:(ZoomVideoSDKInitParams * _Nonnull)context;
 
 /**
- * @brief un-nitialize the Zoom SDK.
- * @warning Only cleanup succesfully after initialized .
+ * @brief Uninitialize the Zoom SDK.
+ * @warning Only cleanup successfully after initialized.
  * @return The result of cleanup SDK.
  */
 - (ZoomVideoSDKError)cleanup;
@@ -379,6 +383,22 @@
  */
 -(ZoomVideoSDKSessionType)getSessionType;
 
+/**
+ * @brief Get the broadcast streaming controller object.
+ * @return The broadcast streaming controller object. otherwise nil. See \link ZoomVideoSDKBroadcastStreamingHelper \endlink.
+*/
+- (ZoomVideoSDKBroadcastStreamingHelper *_Nullable)getBroadcastStreamingHelper;
+/**
+ * @brief Get the broadcast streaming viewer object.
+ * @return The return value is the broadcast streaming viewer object. otherwise nil. See \link ZoomVideoSDKBroadcastStreamingViewerHelper \endlink.
+*/
 
+- (ZoomVideoSDKBroadcastStreamingViewerHelper * _Nullable)getBroadcastStreamingViewerHelper;
+
+/**
+@brief Get whiteboard helper object.
+@return If the function succeeds, the return value is the whiteboard helper object. Otherwise returns nil. For more details, see \link ZoomVideoSDKWhiteboardHelper \endlink.
+ */
+- (ZoomVideoSDKWhiteboardHelper * _Nullable)getWhiteboardHelper  API_UNAVAILABLE(visionos);
 
 @end

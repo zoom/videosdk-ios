@@ -1,12 +1,57 @@
-//
-//  ZoomVideoSDKLiveStreamHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2018/12/26.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKLiveStreamHelper.h
+ * @brief Interface for live streaming operations including starting/stopping live streams and managing incoming live stream status.
+ */
 
 #import <Foundation/Foundation.h>
+/**
+ * @class ZoomVideoSDKLiveStreamSetting
+ * @brief Live stream settings configuration class for Zoom Video SDK.
+ * This class contains layout and close caption settings for live streaming.
+ */
+@interface ZoomVideoSDKLiveStreamSetting : NSObject
+
+/**
+ * The layout type for the live stream.
+ */
+@property(nonatomic, assign) ZoomVideoSDKLiveStreamLayout layout;
+
+/**
+ * The close caption setting for the live stream.
+ */
+@property(nonatomic, assign) ZoomVideoSDKLiveStreamCloseCaption closeCaption;
+
+@end
+
+/**
+ * @class ZoomVideoSDKLiveStreamParams
+ * @brief Live stream parameters for starting live stream.
+ * This class contains all the necessary parameters to configure and start a live stream.
+ */
+@interface ZoomVideoSDKLiveStreamParams : NSObject
+
+/**
+ * The live stream URL where the stream will be sent (e.g., YouTube, Facebook Live).
+ */
+@property(nonatomic, copy, nullable) NSString* streamUrl;
+
+/**
+ * The live stream key for authentication with the streaming platform.
+ */
+@property(nonatomic, copy, nullable) NSString* key;
+
+/**
+ * The live stream broadcast URL where viewers can watch the stream.
+ */
+@property(nonatomic, copy, nullable) NSString* broadcastUrl;
+
+/**
+ * Live stream settings including layout and close caption options.
+ */
+@property(nonatomic, retain, nullable) ZoomVideoSDKLiveStreamSetting* setting;
+
+@end
+
 
 /**
  * @class ZoomVideoSDKLiveStreamHelper
@@ -21,8 +66,17 @@
  * @param broadcastURL The URL of live stream website.
  * @return Success means that the method is called successfully, otherwise not.
  * @warning Only session host can start live Stream successfully.
+ * @deprecated This method is deprecated. Use startLiveStreamWithParams: instead.
  */
-- (ZoomVideoSDKError)startLiveStreamWithStreamingURL:(NSString * _Nullable)streamingURL StreamingKey:(NSString * _Nullable)key BroadcastURL:(NSString * _Nullable)broadcastURL;
+- (ZoomVideoSDKError)startLiveStreamWithStreamingURL:(NSString * _Nullable)streamingURL StreamingKey:(NSString * _Nullable)key BroadcastURL:(NSString * _Nullable)broadcastURL __deprecated_msg("Use startLiveStreamWithParams: instead");
+
+/**
+ * @brief Start a live stream of the current session using ZoomVideoSDKLiveStreamParams.
+ * @param param The live stream parameters containing URL, key, broadcast URL and settings.
+ * @return Success means that the method is called successfully, otherwise not.
+ * @warning Only session host can start live Stream successfully.
+ */
+- (ZoomVideoSDKError)startLiveStreamWithParams:(ZoomVideoSDKLiveStreamParams * _Nullable)param;
 
 /**
  * @brief Set to stop live streaming.
@@ -36,6 +90,28 @@
  * @return The result of it.
  */
 - (ZoomVideoSDKError)canStartLiveStream;
+
+/**
+ * @brief Get the current live stream settings for the current session.
+ * @return The current live stream settings. Returns nil if no live stream is active.
+ */
+- (ZoomVideoSDKLiveStreamSetting * _Nullable)getCurrentLiveStreamSetting;
+
+/**
+ * @brief Update the live stream settings for the current session.
+ * @param setting The new live stream settings to apply.
+ * @return Success means that the method is called successfully, otherwise not.
+ * @warning The function is available only for host.
+ * @note If the same settings as the previous call are passed, this function will return Errors_Wrong_Usage.
+ */
+- (ZoomVideoSDKError)updateLiveStreamSetting:(ZoomVideoSDKLiveStreamSetting * _Nullable)setting;
+
+/**
+ * @brief Check if the current user can get or update live stream settings.
+ * @return true if the user can get or update live stream settings, false otherwise.
+ * @note Live stream must be started, and only the person who started the live stream can get or update the setting.
+ */
+- (BOOL)canGetOrUpdateLiveStreamSetting;
 
 @end
 

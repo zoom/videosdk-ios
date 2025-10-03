@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKCmdChannel.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2021/12/22.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKCmdChannel.h
+ * @brief Interface for command channel operations allowing custom command data exchange between session participants.
+ */
 
 #import <Foundation/Foundation.h>
 

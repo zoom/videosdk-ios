@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKRemoteCameraControlHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2023/10/31.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKRemoteCameraControlHelper.h
+ * @brief Interface for remote camera control operations including pan, tilt, zoom, and camera movement management.
+ */
 
 #import <Foundation/Foundation.h>
 #import <ZoomVideoSDK/ZoomVideoSDKConstants.h>

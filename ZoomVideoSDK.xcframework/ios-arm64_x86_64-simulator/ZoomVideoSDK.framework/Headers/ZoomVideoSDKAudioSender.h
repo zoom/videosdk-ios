@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKAudioSender.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom on 2021/3/16.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKAudioSender.h
+ * @brief Interface for sending custom audio data through external audio source protocols.
+ */
 
 #import <Foundation/Foundation.h>
 

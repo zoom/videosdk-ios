@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKFileTranserHandle.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 4/15/24.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKFileTranserHandle.h
+ * @brief Interface for file transfer operations including sending, receiving, and managing file transfer status.
+ */
 
 #import <Foundation/Foundation.h>
 #import <ZoomVideoSDK/ZoomVideoSDK.h>

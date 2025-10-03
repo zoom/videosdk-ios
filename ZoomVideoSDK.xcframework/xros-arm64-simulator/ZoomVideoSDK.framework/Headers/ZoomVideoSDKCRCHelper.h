@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKCRCHelper.h
-//  ZoomVideoSDK
-//
-//  Created by ZOOM on 2023/4/4.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKCRCHelper.h
+ * @brief Interface for CRC (Circuit-Reliable Communication) operations including H.323 and SIP protocol support.
+ */
 
 #import <Foundation/Foundation.h>
 

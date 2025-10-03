@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKVideoCapability.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2020/3/9.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKVideoCapability.h
+ * @brief Interface for video capability information including supported resolutions and video feature capabilities.
+ */
 
 #import <Foundation/Foundation.h>
 

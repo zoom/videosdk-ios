@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKRecordingHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2021/12/23.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKRecordingHelper.h
+ * @brief Interface for cloud recording operations including start, stop, pause, resume recording and recording status management.
+ */
 
 #import <Foundation/Foundation.h>
 

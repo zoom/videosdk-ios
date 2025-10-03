@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKAudioRawData.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2019/5/16.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKAudioRawData.h
+ * @brief Interface for audio raw data objects containing audio buffer information and audio channel configurations.
+ */
 
 #import <Foundation/Foundation.h>
 

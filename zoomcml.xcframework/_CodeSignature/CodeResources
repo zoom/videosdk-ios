@@ -10,7 +10,7 @@
 		</data>
 		<key>ios-arm64/zoomcml.framework/Info.plist</key>
 		<data>
-		dahnfxnOKTFNQXzEH3P8BbY6GXU=
+		FVeIphkMNlRGNiOmB23yfatkap4=
 		</data>
 		<key>ios-arm64/zoomcml.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -114,7 +114,7 @@
 		</data>
 		<key>ios-arm64/zoomcml.framework/zoomcml</key>
 		<data>
-		NSSUcfdGQPxNPcjOGSxlRTsG72o=
+		4/1ZvU8qwGu/B+9DjUfPtJipGxs=
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/Headers/zoomcml_interface.h</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/Info.plist</key>
 		<data>
-		dosw8tJkJ4kZNOKCWUtcQGDKhpQ=
+		B/FpoH1HYznBErFdpJePfT33VW4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/_CodeSignature/CodeResources</key>
 		<data>
-		0bXEY6Gy/Hn6szHib8tjgJmEbPI=
+		q3CtiqqkpYScT3jFaY3hRBsERF8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
 		<data>
@@ -230,7 +230,123 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/zoomcml</key>
 		<data>
-		HFGdkE/BxwygVODj67oiencTk0M=
+		r/T7zaCGYMM4QpvdiC5ZCFUrUOQ=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/Headers/zoomcml_interface.h</key>
+		<data>
+		jpSqq9xf3Al6OY+/SgbRaHa24ng=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/Info.plist</key>
+		<data>
+		8964ddax216ug4OnU/447GNZ1Ls=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/PrivacyInfo.xcprivacy</key>
+		<data>
+		aEevFz2jB9d0XJX7ayULozeuML8=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/_CodeSignature/CodeResources</key>
+		<data>
+		s+c5yYnZD1oy1YEEBDceQcsxviQ=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
+		<data>
+		xib7FM8WfEwKe7gSwCBWMW4EljM=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/coremldata.bin</key>
+		<data>
+		9psSHgmJK0qBT4JPG0JalVhXYiA=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/metadata.json</key>
+		<data>
+		kFDVetYjPisj1JsDcrLvBbMCKDQ=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/model.espresso.weights</key>
+		<data>
+		VeKlTqKtqJrVx/H04mWroW63SD8=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/model/coremldata.bin</key>
+		<data>
+		9brzNLtTyr6wxUFJNNE25rck8D0=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<data>
+		uA3l0Th1hUHF8FJlrRRKufqG0ds=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/analytics/coremldata.bin</key>
+		<data>
+		NVrMk4QdNvdZMBQYUh5+1K+gSd0=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/coremldata.bin</key>
+		<data>
+		9psSHgmJK0qBT4JPG0JalVhXYiA=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/metadata.json</key>
+		<data>
+		kXwyVesTaEfLkql1o8ImjNWerko=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/model.espresso.weights</key>
+		<data>
+		W5s8O4u5BjG6uM5xN1SZf7qvhkI=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/model/coremldata.bin</key>
+		<data>
+		9brzNLtTyr6wxUFJNNE25rck8D0=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<data>
+		uA3l0Th1hUHF8FJlrRRKufqG0ds=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
+		<data>
+		XCfBRM+Jn6x1wo6yL9FjlLxJOVE=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/coremldata.bin</key>
+		<data>
+		dGbzCvauW2PkuNAAUq1QyOOJhmc=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/metadata.json</key>
+		<data>
+		jl1kOS+BvnSAFKQI9efwJ0XsZnM=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/model.espresso.weights</key>
+		<data>
+		WYz/nsapBlRK0R7MEe8ExKLjUmk=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/model/coremldata.bin</key>
+		<data>
+		oo/NZKySpzKvYCI3b4h5KsiH9o4=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<data>
+		uA3l0Th1hUHF8FJlrRRKufqG0ds=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/analytics/coremldata.bin</key>
+		<data>
+		9gcAnCVCafpeJtzpvZxtHJR0yRs=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/coremldata.bin</key>
+		<data>
+		dGbzCvauW2PkuNAAUq1QyOOJhmc=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/metadata.json</key>
+		<data>
+		WBHMRijRFI/gsZLn8PjMkre+Wcw=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/model.espresso.weights</key>
+		<data>
+		1kwMiKgYyP2QUfZod8w970O3tjw=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/model/coremldata.bin</key>
+		<data>
+		oo/NZKySpzKvYCI3b4h5KsiH9o4=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<data>
+		uA3l0Th1hUHF8FJlrRRKufqG0ds=
+		</data>
+		<key>xros-arm64-simulator/zoomcml.framework/zoomcml</key>
+		<data>
+		ozxcFzFjeqSDQroylt6sUl+jqwE=
 		</data>
 		<key>xros-arm64/zoomcml.framework/Headers/zoomcml_interface.h</key>
 		<data>
@@ -238,7 +354,7 @@
 		</data>
 		<key>xros-arm64/zoomcml.framework/Info.plist</key>
 		<data>
-		VeimohKl1jqRo7YjURF5hG3oWac=
+		bwXCyjbKGupK0xjNSrrNhWtWuHA=
 		</data>
 		<key>xros-arm64/zoomcml.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -246,7 +362,7 @@
 		</data>
 		<key>xros-arm64/zoomcml.framework/_CodeSignature/CodeResources</key>
 		<data>
-		0bXEY6Gy/Hn6szHib8tjgJmEbPI=
+		q3CtiqqkpYScT3jFaY3hRBsERF8=
 		</data>
 		<key>xros-arm64/zoomcml.framework/afn_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
 		<data>
@@ -346,123 +462,7 @@
 		</data>
 		<key>xros-arm64/zoomcml.framework/zoomcml</key>
 		<data>
-		50piRuu7jcqkkMZUQPqS1RwhrIA=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/Headers/zoomcml_interface.h</key>
-		<data>
-		jpSqq9xf3Al6OY+/SgbRaHa24ng=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/Info.plist</key>
-		<data>
-		V1WJa1IESlz0brl3RQ4+oiZwXVY=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/PrivacyInfo.xcprivacy</key>
-		<data>
-		aEevFz2jB9d0XJX7ayULozeuML8=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/_CodeSignature/CodeResources</key>
-		<data>
-		TopbJwctnM9f9r83JuoTkM4kCFQ=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
-		<data>
-		xib7FM8WfEwKe7gSwCBWMW4EljM=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/coremldata.bin</key>
-		<data>
-		9psSHgmJK0qBT4JPG0JalVhXYiA=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/metadata.json</key>
-		<data>
-		kFDVetYjPisj1JsDcrLvBbMCKDQ=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/model.espresso.weights</key>
-		<data>
-		VeKlTqKtqJrVx/H04mWroW63SD8=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/model/coremldata.bin</key>
-		<data>
-		9brzNLtTyr6wxUFJNNE25rck8D0=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<data>
-		uA3l0Th1hUHF8FJlrRRKufqG0ds=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/analytics/coremldata.bin</key>
-		<data>
-		NVrMk4QdNvdZMBQYUh5+1K+gSd0=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/coremldata.bin</key>
-		<data>
-		9psSHgmJK0qBT4JPG0JalVhXYiA=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/metadata.json</key>
-		<data>
-		kXwyVesTaEfLkql1o8ImjNWerko=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/model.espresso.weights</key>
-		<data>
-		W5s8O4u5BjG6uM5xN1SZf7qvhkI=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/model/coremldata.bin</key>
-		<data>
-		9brzNLtTyr6wxUFJNNE25rck8D0=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<data>
-		uA3l0Th1hUHF8FJlrRRKufqG0ds=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
-		<data>
-		XCfBRM+Jn6x1wo6yL9FjlLxJOVE=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/coremldata.bin</key>
-		<data>
-		dGbzCvauW2PkuNAAUq1QyOOJhmc=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/metadata.json</key>
-		<data>
-		jl1kOS+BvnSAFKQI9efwJ0XsZnM=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/model.espresso.weights</key>
-		<data>
-		WYz/nsapBlRK0R7MEe8ExKLjUmk=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/model/coremldata.bin</key>
-		<data>
-		oo/NZKySpzKvYCI3b4h5KsiH9o4=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<data>
-		uA3l0Th1hUHF8FJlrRRKufqG0ds=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/analytics/coremldata.bin</key>
-		<data>
-		9gcAnCVCafpeJtzpvZxtHJR0yRs=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/coremldata.bin</key>
-		<data>
-		dGbzCvauW2PkuNAAUq1QyOOJhmc=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/metadata.json</key>
-		<data>
-		WBHMRijRFI/gsZLn8PjMkre+Wcw=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/model.espresso.weights</key>
-		<data>
-		1kwMiKgYyP2QUfZod8w970O3tjw=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/model/coremldata.bin</key>
-		<data>
-		oo/NZKySpzKvYCI3b4h5KsiH9o4=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<data>
-		uA3l0Th1hUHF8FJlrRRKufqG0ds=
-		</data>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/zoomcml</key>
-		<data>
-		IO0TB+X9R0M71M+zee1HmbAYaq0=
+		Tw57BUGDjVVZSQCVuJ/ZqHC2RA0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -482,11 +482,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dahnfxnOKTFNQXzEH3P8BbY6GXU=
+			FVeIphkMNlRGNiOmB23yfatkap4=
 			</data>
 			<key>hash2</key>
 			<data>
-			RqMgnO8fwo+Mv1eFpLyjT9LZECt5lH8oqRGbHlr1rPg=
+			xpOcYeGpH26dxiA/0SiJ3HFcK9C3BI9qc1lG2rTs2l4=
 			</data>
 		</dict>
 		<key>ios-arm64/zoomcml.framework/PrivacyInfo.xcprivacy</key>
@@ -768,11 +768,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NSSUcfdGQPxNPcjOGSxlRTsG72o=
+			4/1ZvU8qwGu/B+9DjUfPtJipGxs=
 			</data>
 			<key>hash2</key>
 			<data>
-			LKq5PCBxIu3Kng03BBfVIVMJ9chJtY5+qpGA5oSt0dg=
+			SvWgNpRVziBX1rVTO/ZYst1xIQpJ2Eu5WmQ2N1Hga9k=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/Headers/zoomcml_interface.h</key>
@@ -790,11 +790,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dosw8tJkJ4kZNOKCWUtcQGDKhpQ=
+			B/FpoH1HYznBErFdpJePfT33VW4=
 			</data>
 			<key>hash2</key>
 			<data>
-			UEHRfiVIc4FcwbSUtYlF1J51OTqGv+EazXpuvsPfpXE=
+			TrJ1TtqnFhaFsgRoOvMzUmo7ll0MFxsCdT5rT9ZCEtM=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/PrivacyInfo.xcprivacy</key>
@@ -812,11 +812,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0bXEY6Gy/Hn6szHib8tjgJmEbPI=
+			q3CtiqqkpYScT3jFaY3hRBsERF8=
 			</data>
 			<key>hash2</key>
 			<data>
-			0ZiZMUUKnXZPubZRzG1VUpKtiqhDYVlqG9GOo7B7YBI=
+			hh8+aWvKd6+U3uiKn4t9oHTZR8A3brv2iOuFqoCYRSw=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
@@ -1087,11 +1087,330 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HFGdkE/BxwygVODj67oiencTk0M=
+			r/T7zaCGYMM4QpvdiC5ZCFUrUOQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			dT90Yy9o8LzeMOB+99cbHAdstRjlW9ShaWFl0LcCt7U=
+			AWFo1jqhKHo2Al1ViV1muNlzyCoY0g34UHyvDW/4U1c=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/Headers/zoomcml_interface.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jpSqq9xf3Al6OY+/SgbRaHa24ng=
+			</data>
+			<key>hash2</key>
+			<data>
+			IlNXV1dSIep/BlEKnKkhM1ene5J89UerxRsrfzZ7JNU=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8964ddax216ug4OnU/447GNZ1Ls=
+			</data>
+			<key>hash2</key>
+			<data>
+			KOn7aqT/z7upqtPbfp4KONr7GZ09/CK4rOU1OORf4WI=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aEevFz2jB9d0XJX7ayULozeuML8=
+			</data>
+			<key>hash2</key>
+			<data>
+			E2feaet/Tgfk+ahm9N3qIQEGflwbswGOkFYBUuk7/dE=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			s+c5yYnZD1oy1YEEBDceQcsxviQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			gvsu37MLSFXeXNTIjD4JUmeHwkKugrxx7rHHemX9YBg=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xib7FM8WfEwKe7gSwCBWMW4EljM=
+			</data>
+			<key>hash2</key>
+			<data>
+			1/N0cY5eNVid2lvQHXHYWmijfKALxpEjt7I0gJVXEa4=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9psSHgmJK0qBT4JPG0JalVhXYiA=
+			</data>
+			<key>hash2</key>
+			<data>
+			xac6q1Y6SW6bRsfZDJZYvH/CNbwB1n/p+rLlIvHP2gU=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/metadata.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kFDVetYjPisj1JsDcrLvBbMCKDQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			X4fxcSKqeixRdOn+T3MgKb9jFlPkCbeKZ08oeaXz0mU=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/model.espresso.weights</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VeKlTqKtqJrVx/H04mWroW63SD8=
+			</data>
+			<key>hash2</key>
+			<data>
+			rw9Iw4KP7t7UG0E7iCyY2jOumZbZM8OptMhH3+ALZAM=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/model/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9brzNLtTyr6wxUFJNNE25rck8D0=
+			</data>
+			<key>hash2</key>
+			<data>
+			Mf2VTRP6xAXB09Q5rEX1fy6wZSr9cRZ93LVKgqbMi8E=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uA3l0Th1hUHF8FJlrRRKufqG0ds=
+			</data>
+			<key>hash2</key>
+			<data>
+			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/analytics/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NVrMk4QdNvdZMBQYUh5+1K+gSd0=
+			</data>
+			<key>hash2</key>
+			<data>
+			GDJpwqowCjex4NWDUQvkPtvJgEAj70S001FZ3Kvokb8=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9psSHgmJK0qBT4JPG0JalVhXYiA=
+			</data>
+			<key>hash2</key>
+			<data>
+			xac6q1Y6SW6bRsfZDJZYvH/CNbwB1n/p+rLlIvHP2gU=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/metadata.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kXwyVesTaEfLkql1o8ImjNWerko=
+			</data>
+			<key>hash2</key>
+			<data>
+			6KtS3f82YShkpxQ6F/2Wu56Tvdcc687kR5wGhTnxloA=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/model.espresso.weights</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			W5s8O4u5BjG6uM5xN1SZf7qvhkI=
+			</data>
+			<key>hash2</key>
+			<data>
+			7X9fm37zeZYePi/+Jk1yLNETzAOKH8FkiSQ2/5RD+dA=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/model/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9brzNLtTyr6wxUFJNNE25rck8D0=
+			</data>
+			<key>hash2</key>
+			<data>
+			Mf2VTRP6xAXB09Q5rEX1fy6wZSr9cRZ93LVKgqbMi8E=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uA3l0Th1hUHF8FJlrRRKufqG0ds=
+			</data>
+			<key>hash2</key>
+			<data>
+			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XCfBRM+Jn6x1wo6yL9FjlLxJOVE=
+			</data>
+			<key>hash2</key>
+			<data>
+			hL4Z0I7F5q0LUnbFpys1znRs+ISJMUm6ufouYgw1bpQ=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dGbzCvauW2PkuNAAUq1QyOOJhmc=
+			</data>
+			<key>hash2</key>
+			<data>
+			5RqJjpmWWRrkwjZwvjLbBdXyiZKqBlAbIdpgq/us5Ns=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/metadata.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jl1kOS+BvnSAFKQI9efwJ0XsZnM=
+			</data>
+			<key>hash2</key>
+			<data>
+			2Vmc3WUHDvo5C3+vLzpFWwypvL6dT67Pc/NJmRufEyE=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/model.espresso.weights</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WYz/nsapBlRK0R7MEe8ExKLjUmk=
+			</data>
+			<key>hash2</key>
+			<data>
+			V/qV9+giuMqb+t5YddwbWQDrjTYvdbWQJExwGLNqL4o=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/model/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oo/NZKySpzKvYCI3b4h5KsiH9o4=
+			</data>
+			<key>hash2</key>
+			<data>
+			qyJZQtvdEbvyfYMQmE+zx9EcLlAEE0yOW7z576npMnE=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uA3l0Th1hUHF8FJlrRRKufqG0ds=
+			</data>
+			<key>hash2</key>
+			<data>
+			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/analytics/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9gcAnCVCafpeJtzpvZxtHJR0yRs=
+			</data>
+			<key>hash2</key>
+			<data>
+			es3PcsOHiLnCcSm5KDy4ax5WpjL+maSLfy9c4Bop164=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dGbzCvauW2PkuNAAUq1QyOOJhmc=
+			</data>
+			<key>hash2</key>
+			<data>
+			5RqJjpmWWRrkwjZwvjLbBdXyiZKqBlAbIdpgq/us5Ns=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/metadata.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WBHMRijRFI/gsZLn8PjMkre+Wcw=
+			</data>
+			<key>hash2</key>
+			<data>
+			EpJgWBz/MHPlUdTXPZJ8Qp1EvSei3FntgfgEed9PBLE=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/model.espresso.weights</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			1kwMiKgYyP2QUfZod8w970O3tjw=
+			</data>
+			<key>hash2</key>
+			<data>
+			pnJHpKiBrSYEyNiH5IfIMjmLCdw9YDrGL9razIi5t7w=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/model/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oo/NZKySpzKvYCI3b4h5KsiH9o4=
+			</data>
+			<key>hash2</key>
+			<data>
+			qyJZQtvdEbvyfYMQmE+zx9EcLlAEE0yOW7z576npMnE=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/neural_network_optionals/coremldata.bin</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uA3l0Th1hUHF8FJlrRRKufqG0ds=
+			</data>
+			<key>hash2</key>
+			<data>
+			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
+			</data>
+		</dict>
+		<key>xros-arm64-simulator/zoomcml.framework/zoomcml</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ozxcFzFjeqSDQroylt6sUl+jqwE=
+			</data>
+			<key>hash2</key>
+			<data>
+			E+TXWAKoFdPuvVbi4dztpEQEtYKQOC1mk15czDOxCh8=
 			</data>
 		</dict>
 		<key>xros-arm64/zoomcml.framework/Headers/zoomcml_interface.h</key>
@@ -1109,11 +1428,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VeimohKl1jqRo7YjURF5hG3oWac=
+			bwXCyjbKGupK0xjNSrrNhWtWuHA=
 			</data>
 			<key>hash2</key>
 			<data>
-			jBy5ZqPXFNb7h/smNrrPSYc57kWjLbyYch6Ry3HqcHA=
+			IyBSPAUGT6dLfmMS4fRBXrMy+hpeenR+zXkjop7XCOQ=
 			</data>
 		</dict>
 		<key>xros-arm64/zoomcml.framework/PrivacyInfo.xcprivacy</key>
@@ -1131,11 +1450,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0bXEY6Gy/Hn6szHib8tjgJmEbPI=
+			q3CtiqqkpYScT3jFaY3hRBsERF8=
 			</data>
 			<key>hash2</key>
 			<data>
-			0ZiZMUUKnXZPubZRzG1VUpKtiqhDYVlqG9GOo7B7YBI=
+			hh8+aWvKd6+U3uiKn4t9oHTZR8A3brv2iOuFqoCYRSw=
 			</data>
 		</dict>
 		<key>xros-arm64/zoomcml.framework/afn_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
@@ -1406,330 +1725,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			50piRuu7jcqkkMZUQPqS1RwhrIA=
+			Tw57BUGDjVVZSQCVuJ/ZqHC2RA0=
 			</data>
 			<key>hash2</key>
 			<data>
-			ScbK7qXtV3f3zSaFIy+qWY082qk9T84nqRJq6CMNAkk=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/Headers/zoomcml_interface.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jpSqq9xf3Al6OY+/SgbRaHa24ng=
-			</data>
-			<key>hash2</key>
-			<data>
-			IlNXV1dSIep/BlEKnKkhM1ene5J89UerxRsrfzZ7JNU=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			V1WJa1IESlz0brl3RQ4+oiZwXVY=
-			</data>
-			<key>hash2</key>
-			<data>
-			mXt2d7nLsIfajwAZUIZoPgFCXIdc3Qv7Ec2gaHTeVTM=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			aEevFz2jB9d0XJX7ayULozeuML8=
-			</data>
-			<key>hash2</key>
-			<data>
-			E2feaet/Tgfk+ahm9N3qIQEGflwbswGOkFYBUuk7/dE=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			TopbJwctnM9f9r83JuoTkM4kCFQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			YLWgizXGm3d680qdxSKKWwrZRWF7T0oNER01A60WJew=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xib7FM8WfEwKe7gSwCBWMW4EljM=
-			</data>
-			<key>hash2</key>
-			<data>
-			1/N0cY5eNVid2lvQHXHYWmijfKALxpEjt7I0gJVXEa4=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9psSHgmJK0qBT4JPG0JalVhXYiA=
-			</data>
-			<key>hash2</key>
-			<data>
-			xac6q1Y6SW6bRsfZDJZYvH/CNbwB1n/p+rLlIvHP2gU=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/metadata.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kFDVetYjPisj1JsDcrLvBbMCKDQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			X4fxcSKqeixRdOn+T3MgKb9jFlPkCbeKZ08oeaXz0mU=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/model.espresso.weights</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VeKlTqKtqJrVx/H04mWroW63SD8=
-			</data>
-			<key>hash2</key>
-			<data>
-			rw9Iw4KP7t7UG0E7iCyY2jOumZbZM8OptMhH3+ALZAM=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/model/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9brzNLtTyr6wxUFJNNE25rck8D0=
-			</data>
-			<key>hash2</key>
-			<data>
-			Mf2VTRP6xAXB09Q5rEX1fy6wZSr9cRZ93LVKgqbMi8E=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_hori.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uA3l0Th1hUHF8FJlrRRKufqG0ds=
-			</data>
-			<key>hash2</key>
-			<data>
-			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/analytics/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			NVrMk4QdNvdZMBQYUh5+1K+gSd0=
-			</data>
-			<key>hash2</key>
-			<data>
-			GDJpwqowCjex4NWDUQvkPtvJgEAj70S001FZ3Kvokb8=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9psSHgmJK0qBT4JPG0JalVhXYiA=
-			</data>
-			<key>hash2</key>
-			<data>
-			xac6q1Y6SW6bRsfZDJZYvH/CNbwB1n/p+rLlIvHP2gU=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/metadata.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kXwyVesTaEfLkql1o8ImjNWerko=
-			</data>
-			<key>hash2</key>
-			<data>
-			6KtS3f82YShkpxQ6F/2Wu56Tvdcc687kR5wGhTnxloA=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/model.espresso.weights</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			W5s8O4u5BjG6uM5xN1SZf7qvhkI=
-			</data>
-			<key>hash2</key>
-			<data>
-			7X9fm37zeZYePi/+Jk1yLNETzAOKH8FkiSQ2/5RD+dA=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/model/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9brzNLtTyr6wxUFJNNE25rck8D0=
-			</data>
-			<key>hash2</key>
-			<data>
-			Mf2VTRP6xAXB09Q5rEX1fy6wZSr9cRZ93LVKgqbMi8E=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/afn_iOS_vert.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uA3l0Th1hUHF8FJlrRRKufqG0ds=
-			</data>
-			<key>hash2</key>
-			<data>
-			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/analytics/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			XCfBRM+Jn6x1wo6yL9FjlLxJOVE=
-			</data>
-			<key>hash2</key>
-			<data>
-			hL4Z0I7F5q0LUnbFpys1znRs+ISJMUm6ufouYgw1bpQ=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dGbzCvauW2PkuNAAUq1QyOOJhmc=
-			</data>
-			<key>hash2</key>
-			<data>
-			5RqJjpmWWRrkwjZwvjLbBdXyiZKqBlAbIdpgq/us5Ns=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/metadata.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			jl1kOS+BvnSAFKQI9efwJ0XsZnM=
-			</data>
-			<key>hash2</key>
-			<data>
-			2Vmc3WUHDvo5C3+vLzpFWwypvL6dT67Pc/NJmRufEyE=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/model.espresso.weights</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WYz/nsapBlRK0R7MEe8ExKLjUmk=
-			</data>
-			<key>hash2</key>
-			<data>
-			V/qV9+giuMqb+t5YddwbWQDrjTYvdbWQJExwGLNqL4o=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/model/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oo/NZKySpzKvYCI3b4h5KsiH9o4=
-			</data>
-			<key>hash2</key>
-			<data>
-			qyJZQtvdEbvyfYMQmE+zx9EcLlAEE0yOW7z576npMnE=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_hori.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uA3l0Th1hUHF8FJlrRRKufqG0ds=
-			</data>
-			<key>hash2</key>
-			<data>
-			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/analytics/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			9gcAnCVCafpeJtzpvZxtHJR0yRs=
-			</data>
-			<key>hash2</key>
-			<data>
-			es3PcsOHiLnCcSm5KDy4ax5WpjL+maSLfy9c4Bop164=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dGbzCvauW2PkuNAAUq1QyOOJhmc=
-			</data>
-			<key>hash2</key>
-			<data>
-			5RqJjpmWWRrkwjZwvjLbBdXyiZKqBlAbIdpgq/us5Ns=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/metadata.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WBHMRijRFI/gsZLn8PjMkre+Wcw=
-			</data>
-			<key>hash2</key>
-			<data>
-			EpJgWBz/MHPlUdTXPZJ8Qp1EvSei3FntgfgEed9PBLE=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/model.espresso.weights</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1kwMiKgYyP2QUfZod8w970O3tjw=
-			</data>
-			<key>hash2</key>
-			<data>
-			pnJHpKiBrSYEyNiH5IfIMjmLCdw9YDrGL9razIi5t7w=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/model/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			oo/NZKySpzKvYCI3b4h5KsiH9o4=
-			</data>
-			<key>hash2</key>
-			<data>
-			qyJZQtvdEbvyfYMQmE+zx9EcLlAEE0yOW7z576npMnE=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/bgr_iOS_vert.mlmodelc/neural_network_optionals/coremldata.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uA3l0Th1hUHF8FJlrRRKufqG0ds=
-			</data>
-			<key>hash2</key>
-			<data>
-			LDTOHfI7g4xavyp/ZDfMo9MGftUJ/yXxHfaxG1grUes=
-			</data>
-		</dict>
-		<key>xros-arm64_x86_64-simulator/zoomcml.framework/zoomcml</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			IO0TB+X9R0M71M+zee1HmbAYaq0=
-			</data>
-			<key>hash2</key>
-			<data>
-			a0xUJcDowyJtY0ugUvX++wKwrirOACTpO5PXA+9PMho=
+			zFy7DR9d/Q+nkhoDBJD7V/a/fw218XFWHubzaC9uXfc=
 			</data>
 		</dict>
 	</dict>

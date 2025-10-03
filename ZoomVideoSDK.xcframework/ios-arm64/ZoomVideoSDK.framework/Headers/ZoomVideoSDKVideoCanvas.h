@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKVideoCanvas.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2018/12/7.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKVideoCanvas.h
+ * @brief Interface for video canvas operations including video rendering, view management, and aspect ratio control.
+ */
 
 #import <UIKit/UIKit.h>
 

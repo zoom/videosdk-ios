@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKAudioSettingHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2022/4/7.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKAudioSettingHelper.h
+ * @brief Interface for audio settings management including microphone and speaker configuration.
+ */
 
 #import <Foundation/Foundation.h>
 
