@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKRenderer.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2019/2/1.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKRawDataPipe.h
+ * @brief Interface for raw data pipe operations including video data subscription and rendering delegate methods.
+ */
 
 #import <Foundation/Foundation.h>
 #import <ZoomVideoSDK/ZoomVideoSDKDelegate.h>

@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKChatHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2019/1/9.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKChatHelper.h
+ * @brief Interface for chat messaging operations including sending messages, deleting messages, and managing chat privileges.
+ */
 
 #import <Foundation/Foundation.h>
 

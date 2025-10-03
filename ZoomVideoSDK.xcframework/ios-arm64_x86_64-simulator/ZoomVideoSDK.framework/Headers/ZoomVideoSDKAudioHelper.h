@@ -1,36 +1,33 @@
-//
-//  ZoomVideoSDKAudioHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2018/12/6.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKAudioHelper.h
+ * @brief Interface for managing audio operations including start/stop, mute/unmute, audio device control, and audio raw data subscription.
+ */
 
 #import <Foundation/Foundation.h>
 #import <ZoomVideoSDK/ZoomVideoSDK.h>
 
 /**
  * @class ZoomVideoSDKAudioDevice
- * @brief Zoom Video SDK Audio Device
+ * @brief Represents an audio device used in the Zoom Video SDK.
  */
 @interface ZoomVideoSDKAudioDevice : NSObject
 /**
- * @brief Audio device type.
- * @return the audio device type. See {@link AVAudioSessionPort}
+ * @brief Gets the audio device type.
+ * @return The audio device type. See {@link AVAudioSessionPort}
  */
 - (AVAudioSessionPort _Nullable)getAudioSourceType;
 
 /**
- * @brief Audio device name.
- * @return the audio device name.
+ * @brief Get the audio device name.
+ * @return The audio device name.
  */
 - (NSString *_Nullable)getAudioName;
 @end
 
 
-/*!
- @class ZoomVideoSDKAudioHelper
- @brief A class to operate the audio action.
+/**
+ * @class ZoomVideoSDKAudioHelper
+ * @brief A class to operate the audio action.
  */
 @interface ZoomVideoSDKAudioHelper : NSObject
 
@@ -59,7 +56,7 @@
  * @return The result of it.
  * @warning If unmute self use userid=0.
  * @warning Only host or manager can unmute others audio.
- * @warning This functinon will trigger the callback \link onHostAskUnmute \endlink.
+ * @warning This function will trigger the callback \link onHostAskUnmute \endlink.
  */
 - (ZoomVideoSDKError)unmuteAudio:(ZoomVideoSDKUser * _Nullable)user;
 
@@ -75,7 +72,7 @@
  * @brief Allow the others to unmute themselves or not.
  * @param allowUnmute Yes means allow the user to unmute themself, otherwise NO.
  * @return The result of it.
- * @warning Only host or manager can chagne this property.
+ * @warning Only host or manager can change this property.
  */
 - (ZoomVideoSDKError)allowAudioUnmutedBySelf:(BOOL)allowUnmute;
 
@@ -83,7 +80,7 @@
  * @brief Ask unmute all user's VOIP audio.
  * @return The result of it.
  * @warning Only host or manager can ask unmute all user's audio.
- * @warning This functinon will trigger the callback \link onHostAskUnmute \endlink.
+ * @warning This function will trigger the callback \link onHostAskUnmute \endlink.
  */
 - (ZoomVideoSDKError)unmuteAllAudio;
 
@@ -123,47 +120,47 @@
 - (void)cleanAudioSession DEPRECATED_MSG_ATTRIBUTE("No longer maintain anymore!");
 
 /**
- * @brief Get currently audio output port description, @{AVAudioSessionPortDescription}.
- * @return Return the current audio outout port description.
+ * @brief Get current audio output port description, @{AVAudioSessionPortDescription}.
+ * @return The current audio output port description.
  */
 - (ZoomVideoSDKAudioDevice * _Nullable)getCurrentAudioOutputRoute;
 
 /**
- * @brief Set audio output device, please refer to @{ZoomVideoSDKAudioDevice}.
- * @param device The device port type want to set.
- * @return YES mean the set audio out put route success, otherwise failed.
+ * @brief Set audio output device. See @{ZoomVideoSDKAudioDevice}.
+ * @param device The device to set as the audio output.
+ * @return YES if the output route was set successfully; otherwise, the method failed.
  */
 - (BOOL)setAudioOutputRoute:(ZoomVideoSDKAudioDevice *_Nullable)device;
 
 /**
- * @brief Get avalible audio output port description, @{AVAudioSessionPortDescription}..
- * @return Return the avalible audio outout port description list.
+ * @brief Gets the available audio output port description, @{AVAudioSessionPortDescription}..
+ * @return A list of the vailable audio output pott descriptions.
  */
-- (NSArray <ZoomVideoSDKAudioDevice *>* _Nullable)getAvalibleAudioOutputRoute;
+- (NSArray <ZoomVideoSDKAudioDevice *>* _Nullable)getAvailableAudioOutputRoute;
 
-/*!
- @brief Show the system AirPlay picker.
- @param parentView the parent view which AirPlay picker shows to.
- @return YES means show the picker success, otherwise failed.
+/**
+ @brief Displays the system AirPlay picker.
+ @param parentView The parent view where the AirPlay picker will be shown.
+ @return YES If the picker was shown successfully, otherwise the method failed.
  */
 - (BOOL)showAudioOutputDeviceAirPlayPicker:(UIView *_Nullable)parentView;
 
-/*!
- @brief Get the current audio input device, please refer to @{AVAudioSessionPortDescription}.
- @return Return the current audio input session port description.
+/**
+ @brief Gets the current audio input device. See @{AVAudioSessionPortDescription}.
+ @return The current audio input device.
  */
 - (ZoomVideoSDKAudioDevice *_Nullable)getCurrentAudioInputDevice;
 
-/*!
- @brief Get the available audio input devices, please refer to @{AVAudioSessionPortDescription}.
- @return Return the array of available audio input session port description.
+/**
+ @brief Gets the list of available audio input devices. See @{AVAudioSessionPortDescription}.
+ @return An array of available audio input devices.
  */
 - (NSArray <ZoomVideoSDKAudioDevice *> *_Nullable)getAvailableAudioInputsDevice;
 
-/*!
- @brief Change the audio input device.
- @param device the audio input device want to change to,  please refer to @{AVAudioSessionPortDescription}.
- @return YES means change audio input device success, otherwise failed.
+/**
+ @brief Sets the audio input device..
+ @param device The device to set as the audio input. See @{AVAudioSessionPortDescription}.
+ @return YES If the input device was set successfully, otherwise the method failed.
  */
 - (BOOL)setAudioInputDevice:(ZoomVideoSDKAudioDevice *_Nullable)device;
 @end

@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKPreProcessRawData.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2020/2/26.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKPreProcessRawData.h
+ * @brief Interface for video raw data preprocessing including custom video processing and filtering operations.
+ */
 
 #import <Foundation/Foundation.h>
 

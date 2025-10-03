@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKShareHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2018/12/13.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKShareHelper.h
+ * @brief Interface for screen sharing operations including view sharing, external source sharing, annotation management, and multi-share support.
+ */
 
 #import <Foundation/Foundation.h>
 #import <ZoomVideoSDK/ZoomVideoSDKAnnotationHelper.h>
@@ -246,11 +243,36 @@
 - (ZoomVideoSDKError)destroyAnnotationHelper:(ZoomVideoSDKAnnotationHelper * _Nullable)helper;
 
 /**
- * @brief Enable or disable participants can share simultaneously.
- * @param enable True to enable. False to disable.
- * @return If the function succeeds, the return value is Errors_Success.
- * @warning When you switch multi share from enable to disable, all sharing will be stopped.
+ * @brief Sets the vanishing tool time config.
+ * @param displayTime The time in milliseconds the tool remains visible before fading.
+ * @param vanishingTime The time in milliseconds for the tool to fade out after displayTime.
+ * @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see {@link ZoomVideoSDKError}.
+ * @note This setting only takes effect for the user's own share. The displayTime can be 0 or up to 15000 milliseconds (15 seconds),
+ *      and the vanishingTime must be greater than 1000 milliseconds (1 second) and less than or equal to 15000 milliseconds (15 seconds).
  */
+- (ZoomVideoSDKError)setAnnotationVanishingToolTime:(NSUInteger)displayTime vanishingTime:(NSUInteger)vanishingTime;
+
+/**
+ * @brief Gets the current vanishing tool display time.
+ * @note This function can only retrieve the timer settings for your own share.
+ * @return The time in milliseconds the tool remains visible before fading.
+ */
+- (NSUInteger)getAnnotationVanishingToolDisplayTime;
+
+/**
+ * @brief Gets the current vanishing tool vanishing time.
+ * @return The time in milliseconds for the tool to fade out after displayTime.
+ * @note This function can only retrieve the timer settings for your own share.
+ */
+- (NSUInteger)getAnnotationVanishingToolVanishingTime;
+
+#pragma mark - multi share -
+/**
+* @brief Enable or disable participants can share simultaneously.
+* @param enable True to enable. False to disable.
+* @return If the function succeeds, the return value is Errors_Success.
+* @warning When you switch multi share from enable to disable, all sharing will be stopped.
+*/
 - (ZoomVideoSDKError)enableMultiShare:(BOOL)enable;
 
 /**
@@ -295,18 +317,26 @@
 
 #pragma mark - in-app screen share -
 
-/*!
+/**
  * @brief Check that the system supports in-app screen share or not.
  * @return return whether the device supports in-app screen share or not. Please refer to {@link RPScreenRecorder}.
  */
 - (BOOL)isSupportInAppScreenShare;
 
-/*!
+/**
  * @brief Start in-app screen share.
  * @return If the function succeeds, the return value is Errors_Success. Otherwise failed. To get extended error information, see {@link ZoomVideoSDKError}.
  * @warning Can only be called once every 500ms.
  */
 - (ZoomVideoSDKError)startInAppScreenShare;
+
+/**
+ * @brief Sets the annotation view when the view hierarchy changes.
+ * @param shareView The top-level view for the shared content.
+ * @return {@link ZoomVideoSDKError#Errors_Success} if the operation succeeds; otherwise the method failed.
+ * @warning This API is only available in in-app screen share mode.
+ */
+- (ZoomVideoSDKError)setAnnotationView:(UIView *_Nullable)shareView;
 
 @end
 

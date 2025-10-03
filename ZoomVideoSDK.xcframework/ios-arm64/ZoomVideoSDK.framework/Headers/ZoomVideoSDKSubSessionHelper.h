@@ -1,10 +1,7 @@
-//
-//  ZoomVIdeoSDKSubSessionHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom on 2025/5/15.
-//  Copyright © 2025 Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKSubSessionHelper.h
+ * @brief Interface for sub-session management including creating, managing, and controlling breakout rooms and sub-sessions.
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -19,26 +16,26 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief Get the username of the user who sent this request.
  * @return The username.
  */
--(NSString * _Nullable)getRequestUserName;
+- (NSString * _Nullable)getRequestUserName;
 
 /**
  * @brief Get the name of the subsession where the user  sent this request.
  * @return The subsession name.
  */
--(NSString * _Nullable)getRequestSubSessionName;
+- (NSString * _Nullable)getRequestSubSessionName;
 
 /**
  * @brief Ignore this request.
  * @return If the function succeeds, the return value is Errors_Success, otherwise not.
  * @note 'onSubSessionUserHelpRequestResult' is the corresponding callback notification.
  */
--(ZoomVideoSDKError)ignore;
+- (ZoomVideoSDKError)ignore;
 
 /**
  * @brief Join the subsession which request help is from.
  * @return If the function succeeds, the return value is Errors_Success, otherwise not.
  */
--(ZoomVideoSDKError)joinSubSessionByUserRequest;
+- (ZoomVideoSDKError)joinSubSessionByUserRequest;
 @end
 
 /**

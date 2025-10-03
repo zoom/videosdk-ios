@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKAnnotationHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 4/19/23.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKAnnotationHelper.h
+ * @brief Interface for managing annotation features including tool settings, drawing operations, and annotation permissions during screen sharing.
+ */
 
 #import <Foundation/Foundation.h>
 #import <ZoomVideoSDK/ZoomVideoSDKConstants.h>

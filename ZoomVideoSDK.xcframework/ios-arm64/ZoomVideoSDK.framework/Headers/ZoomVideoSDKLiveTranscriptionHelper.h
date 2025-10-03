@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKLiveTranscriptionHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom on 7/5/22.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKLiveTranscriptionHelper.h
+ * @brief Interface for live transcription operations including starting/stopping transcription and managing transcription content.
+ */
 
 #import <Foundation/Foundation.h>
 

@@ -1,7 +1,7 @@
-//
-//  ZoomVideoSDKDelegate.h
-//  ZoomVideoSDK
-//
+/**
+ * @file ZoomVideoSDKDelegate.h
+ * @brief Protocol defining callback methods for session events, user events, audio/video events, sharing events, and other SDK notifications.
+ */
 
 #import <Foundation/Foundation.h>
 #import <ZoomVideoSDK/ZoomVideoSDKConstants.h>
@@ -23,8 +23,8 @@
 #import <ZoomVideoSDK/ZoomVideoSDKLiveTranscriptionHelper.h>
 #import <ZoomVideoSDK/ZoomVideoSDKFileTranserHandle.h>
 #import <ZoomVideoSDK/ZoomVideoSDKSubSessionHelper.h>
+#import <ZoomVideoSDK/ZoomVideoSDKWhiteboardHelper.h>
 #import <ReplayKit/ReplayKit.h>
-
 @class ZoomVideoSDKRawDataPipe;
 @class ZoomVideoSDKVideoCanvas;
 @class ZoomVideoSDKUser;
@@ -94,13 +94,13 @@
  * @brief Invoked when a user makes changes to their sharing status, such as starting screen sharing, starting view sharing, or stopping sharing.
  * @param helper The pointer to a share helper object.
  * @param user The pointer to a user object.
- * @param shareAction he pointer to the ZoomVideoSDKShareAction object.
+ * @param shareAction The pointer to the ZoomVideoSDKShareAction object.
  */
 - (void)onUserShareStatusChanged:(ZoomVideoSDKShareHelper * _Nullable)helper user:(ZoomVideoSDKUser * _Nullable)user shareAction:(ZoomVideoSDKShareAction*_Nullable)shareAction;
 
 /**
  * @brief Invoked when a user failed to start sharing.
- * @param helper The pointer to a share helper object,.
+ * @param helper The pointer to a share helper object.
  * @param user The pointer to a user object.
  */
 - (void)onFailedToStartShare:(ZoomVideoSDKShareHelper* _Nonnull)helper user:(ZoomVideoSDKUser* _Nullable)user;
@@ -278,9 +278,9 @@
 - (void)onMicSpeakerVolumeChanged:(int)micVolume speakerVolume:(int)speakerVolume;
 
 /**
- * @brief Notify the audio level change of other participants in the session.
+ * @brief Called when the audio level change of participants changes.
  * @param level The current audio level of the user, in the range [0, 9].
- * @param bAudioSharing The audio level is from audio sharing or microphone input.
+ * @param bAudioSharing YES if the audio level is from shared audio, such as computer audio; otherwise it's from the microphone.
  * @param user The user whose audio level has changed.
  */
 - (void)onAudioLevelChanged:(NSUInteger)level audioSharing:(BOOL)bAudioSharing user:(ZoomVideoSDKUser * _Nullable)user;
@@ -336,18 +336,35 @@
 
 
 /**
- * @brief Callback event of the user's video network quality changes.
- * @param status status video network quality.
+ * @brief Called when a user's network status changes (Lite SDK only).
+ * @param status The user's network status.
  * @param user The pointer to the user who speaks the message.
+ * @deprecated use \link onUserNetworkStatusChanged:level:user: \endlink instead.
  */
-- (void)onUserVideoNetworkStatusChanged:(ZoomVideoSDKNetworkStatus)status user:(ZoomVideoSDKUser *_Nullable)user;
+- (void)onUserVideoNetworkStatusChanged:(ZoomVideoSDKNetworkStatus)status user:(ZoomVideoSDKUser *_Nullable)user DEPRECATED_MSG_ATTRIBUTE("Use -onUserNetworkStatusChanged:level:user: instead");
 
 /**
  * @brief Notification of the current user's share network quality changes.
  * @param shareNetworkStatus share network quality.
- *  @param isSendingShare Indicates the direction of the share. If YES, it refers to the sending share; if NO, it refers to the receiving share.
+ * @param isSendingShare Indicates the direction of the share. If YES, it refers to the sending share; if NO, it refers to the receiving share.
+ * @deprecated use \link onUserNetworkStatusChanged:level:user: \endlink instead.
  */
-- (void)onUserShareNetworkStatusChanged:(ZoomVideoSDKNetworkStatus)shareNetworkStatus isSending:(BOOL)isSendingShare;
+- (void)onUserShareNetworkStatusChanged:(ZoomVideoSDKNetworkStatus)shareNetworkStatus isSending:(BOOL)isSendingShare DEPRECATED_MSG_ATTRIBUTE("Use -onUserNetworkStatusChanged:level:user: instead");
+
+/**
+ * @brief Called when the user's share network quality changes.
+ * @param type The data type whose network status changed.
+ * @param level The new network quality level for the specified data type.
+ * @param user The user whose network status has changed.
+ */
+- (void)onUserNetworkStatusChanged:(ZoomVideoSDKDataType)type level:(ZoomVideoSDKNetworkStatus)level user:(ZoomVideoSDKUser * _Nullable)user;
+
+/**
+ * @brief Callback event when a user's overall network status changes.
+ * @param level The new overall network quality level.
+ * @param user The user whose overall network status has changed.
+ */
+- (void)onUserOverallNetworkStatusChanged:(ZoomVideoSDKNetworkStatus)level user:(ZoomVideoSDKUser * _Nullable)user;
 
 
 /**
@@ -380,10 +397,19 @@
 /**
  * @brief Callback: Invoked when a user makes changes to their share content type, such as switching camera share to normal share. Find the share type in \link ZoomVideoSDKShareType \endlink.
  * @param shareHelper share helper util.
- * @param userInfo current start or stop share userInfo.
+ * @param user current start or stop share userInfo.
  * @param shareAction The pointer to a share object.
  */
 - (void)onShareContentChanged:(ZoomVideoSDKShareHelper *_Nullable)shareHelper user:(ZoomVideoSDKUser *_Nullable)user shareAction:(ZoomVideoSDKShareAction *_Nullable)shareAction;
+
+/**
+ * Called when the size of a user's share capture changes.
+ *
+ * @param shareHelper  The share helper object associated with the share.
+ * @param user The user whose share capture size has changed.
+ * @param shareAction  The share action details, such as start, stop, or resize.
+ */
+- (void)onShareCaptureSizeChanged:(ZoomVideoSDKShareHelper *_Nullable)shareHelper user:(ZoomVideoSDKUser *_Nullable)user shareAction:(ZoomVideoSDKShareAction *_Nullable)shareAction;
 
 /**
  * @brief Callback event for the subscribed user's video fail reason.
@@ -482,6 +508,9 @@
  * @param helper The pointer to a share helper object.
  * @param user The pointer to a user object who's share content size has changed.
  * @param shareAction The pointer to the ZoomVideoSDKShareAction object.
+ * @note A share content size change may occur in two cases: 
+ *       when the first frame of shared content is received (from no content to having a size), 
+ *       or when the content size actually changes during sharing.
  */
 - (void)onShareContentSizeChanged:(ZoomVideoSDKShareHelper * _Nullable)helper user:(ZoomVideoSDKUser * _Nullable)user shareAction:(ZoomVideoSDKShareAction*_Nullable)shareAction;
 
@@ -493,12 +522,12 @@
  */
 - (void)onUVCCameraStatusChange:(ZoomVideoSDKUVCCameraStatus)status;
 
+#pragma mark - sub-sessiion -
 /**
  * @brief Callback event that the SubSession status changed.
  * @param status The SubSession status.
  * @param pSubSessionKitList The new SubSession list.
  */
-    
 - (void)onSubSessionStatusChanged:(ZoomVideoSDKSubSessionStatus)status subSession:(NSArray <ZoomVideoSDKSubSessionKit*>* _Nonnull)pSubSessionKitList;
 
 /**
@@ -539,8 +568,8 @@
 
 #pragma mark - ZoomVideoSDK audio source change -
 /**
- * @brief Sink the event that the output type of the current user's audio source changes.
- * @param device Audio types defined in {@link ZoomVideoSDKAudioDevice}.
+ * @brief Callback invoked when the current user's audio source changes.
+ * @param device The updated audio device. See{@link ZoomVideoSDKAudioDevice}.
  */
 - (void)onMyAudioSourceTypeChanged:(ZoomVideoSDKAudioDevice *_Nullable)device;
 
@@ -556,6 +585,46 @@
  * @param available Available or not {@link RPScreenRecorder}.
  */
 - (void)onInAppScreenShareAvailableChanged:(BOOL)available;
+
+/**
+ * @brief Notificates of the response of broadcast streaming.
+ * @param isSuccess YES if broadcast streaming started successfully, otherwise false.
+ * @param channelID The backend service to identify the broadcast streaming channel ID returned by the backend.
+*/
+- (void)onStartBroadcastResponse:(BOOL)isSuccess channelID:(NSString* _Nonnull)channelID ;
+
+/**
+ * @brief Notificates of the response of broadcast streaming.
+ * @param isSuccess YES if broadcast stopped successfully, otherwise false.
+*/
+- (void)onStopBroadcastResponse:(BOOL)isSuccess;
+
+/**
+ * @brief Notificates of the response that gets broadcast status.
+ * @param isSuccess YES if the request succeeded, otherwise false.
+ * @param status The current broadcast status, See \link ZoomVideoSDKBroadcastControlStatus \endlink.
+*/
+- (void)onGetBroadcastControlStatus:(BOOL)isSuccess status:(ZoomVideoSDKBroadcastControlStatus)status;
+
+/**
+ * @brief Notificates when the viewer's joins status changes.
+ * @param status The current join status, See \link ZoomVideoSDKStreamingJoinStatus \endlink.
+*/
+- (void)onStreamingJoinStatusChanged:(ZoomVideoSDKStreamingJoinStatus)status ;
+
+/**
+@brief Callback invoked when a whiteboard file export completes.
+@param format The export format. See \link ZoomVideoSDKWhiteboardExportFormatType \endlink.
+@param data The export whiteboard data as NSData.
+ */
+- (void)onWhiteboardExported:(ZoomVideoSDKWhiteboardExportFormatType)format data:(NSData*_Nonnull)data  API_UNAVAILABLE(visionos);
+
+/**
+@brief Callback invoked when a user changes their whiteboard sharing status, such as starting or stopping whiteboard sharing.
+@param user The user who's whiteboard sharing status changed. Check the current status via \link ZoomVideoSDKUser \endlink.
+@param whiteboardHelper The whiteboard helper object.
+ */
+-(void)onUserWhiteboardShareStatusChanged:(ZoomVideoSDKUser *_Nonnull)user whiteboardhelper:(ZoomVideoSDKWhiteboardHelper*_Nonnull)whiteboardHelper  API_UNAVAILABLE(visionos);
 
 @end
 
@@ -718,7 +787,7 @@ supportCapabilityArray:(NSArray *_Nonnull)supportCapabilityArray
 @optional
 /**
  * @brief Callback for share source can start send raw data.
- * @param rawDataSender sender
+ * @param rawDataSender The sender object.
  */
 - (void)onShareSendStarted:(ZoomVideoSDKShareSender *_Nullable)rawDataSender;
 
@@ -770,4 +839,29 @@ supportCapabilityArray:(NSArray *_Nonnull)supportCapabilityArray
  */
 - (void)onShareStopped;
 
+@end
+
+
+
+@protocol ZoomVideoSDKBroadcastStreamingVideoDelegate <NSObject>
+@optional
+/**
+ * @brief Call when subscribed video data received.
+ * @param rawData Video's YUV420 data.
+ */
+- (void)onVideoFrameRecieved:(ZoomVideoSDKVideoRawData * _Nullable)rawData;
+/**
+ * @brief  Call when subscribed video data received.
+ * @param pixelBuffer Video's CVPixelBufferRef data.
+ */
+- (void)onPixelBuffer:(CVPixelBufferRef _Nullable )pixelBuffer  rotation:(ZoomVideoSDKVideoRawDataRotation)rotation;
+@end
+
+@protocol ZoomVideoSDKBroadcastStreamingAudioDelegate <NSObject>
+@optional
+/**
+ * @brief Call when subscribed audio data received.
+ * @param rawData Audio data object.
+ */
+- (void)onAudioRawDataReceived:(ZoomVideoSDKAudioRawData * _Nullable)rawData;
 @end

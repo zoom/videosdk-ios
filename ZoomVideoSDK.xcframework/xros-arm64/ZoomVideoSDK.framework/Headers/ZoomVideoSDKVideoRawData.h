@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKVideoRawData.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2019/1/29.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKVideoRawData.h
+ * @brief Interface for video raw data objects containing video frame information, buffers, and metadata.
+ */
 
 #import <Foundation/Foundation.h>
 #import <ZoomVideoSDK/ZoomVideoSDKConstants.h>
@@ -36,7 +33,7 @@
 @property (nonatomic, assign, nullable) char *alphaBuffer;
 
 /**
- * @brief the alpha buffer data length.
+ * @brief The alpha buffer data length.
  */
 @property (nonatomic, assign) NSUInteger alphaBufferLen;
 

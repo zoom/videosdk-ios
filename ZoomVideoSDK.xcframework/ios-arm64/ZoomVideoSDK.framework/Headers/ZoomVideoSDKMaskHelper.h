@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKMaskHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 4/19/23.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKMaskHelper.h
+ * @brief Interface for video mask operations including applying and managing video masks with various shapes and configurations.
+ */
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

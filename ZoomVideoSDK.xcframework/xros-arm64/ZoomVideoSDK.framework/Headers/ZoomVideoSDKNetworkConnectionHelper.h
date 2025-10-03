@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKNetworkConnectionHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom on 2022/9/2.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKNetworkConnectionHelper.h
+ * @brief Interface for network connection management including proxy settings and SSL certificate handling.
+ */
 
 #import <Foundation/Foundation.h>
 

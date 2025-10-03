@@ -1,10 +1,7 @@
-//
-//  ZoomVideoSDKVideoHelper.h
-//  ZoomVideoSDK
-//
-//  Created by Zoom Video Communications on 2018/12/6.
-//  Copyright © Zoom Video Communications, Inc. All rights reserved.
-//
+/**
+ * @file ZoomVideoSDKVideoHelper.h
+ * @brief Interface for managing video operations including camera control, video preview, multi-camera support, spotlight features, and video quality settings.
+ */
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
