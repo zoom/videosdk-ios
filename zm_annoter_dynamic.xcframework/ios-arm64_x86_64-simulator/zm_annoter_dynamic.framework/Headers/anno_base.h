@@ -117,7 +117,11 @@ public:
 		return 0; 
 	}
 
-	
+	virtual int SendCptAnnoImage(const CptAnnoImage* cpt_anno_img)
+	{ 
+		return 0;
+	}
+
 protected:
 	virtual ~AnnoBaseObserver() {}
 };
