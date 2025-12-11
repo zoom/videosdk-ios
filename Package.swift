@@ -17,39 +17,45 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "ZoomVideoSDK",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.3.10/ZoomVideoSDK.xcframework.zip",
-            checksum: "f6a31f3387d6638c35e08b7b413a282d3acad3eb01fdadc4692fb74e8736ecf7"
-        ),
-        .binaryTarget(
             name: "CptShare",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.3.10/CptShare.xcframework.zip",
-            checksum: "14d5037a0409883c13d86e49d8b91b244852904263a87a6ba0bdf6d5fb698cc4"
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.5/CptShare.xcframework.zip",
+            checksum: "4bd5389c9d046997bce61080204def190acbd4186ae7b4c8c992fda868125ed1"
         ),
-        .binaryTarget(
-            name: "zoomcml",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.3.10/zoomcml.xcframework.zip",
-            checksum: "f50b420bc033c7ead50d28cfb447f80a6dabf6ed57a5af64265e7b449904da62"
-        ),
-        .binaryTarget(
-            name: "zm_annoter_dynamic",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.3.10/zm_annoter_dynamic.xcframework.zip",
-            checksum: "d7dd17f6abfa6855bf3336ea4df6a281348b70d8a9d87a0a2a063ace0c7a2bfd"
-        ),
-        .binaryTarget(
-            name: "ZoomTask",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.3.10/ZoomTask.xcframework.zip",
-            checksum: "6d9a84d37a833cbcc04e774e35a00a62511cfdef618907142bb032b3a94e99d6"
-        ),
+
         .binaryTarget(
             name: "Whiteboard",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.3.10/Whiteboard.xcframework.zip",
-            checksum: "c139edd38006058e732d13f4ce7ca82b53ffa23cb85788bd26e9fff1cbc1ef8c"
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.5/Whiteboard.xcframework.zip",
+            checksum: "3478f7983b2470a278cb547d82792b37f90e473348c044ca0812c136de5cafb2"
         ),
+
+        .binaryTarget(
+            name: "zm_annoter_dynamic",
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.5/zm_annoter_dynamic.xcframework.zip",
+            checksum: "d17037a853e2d73c00537d0cd8ac61ecbd2b35b03ad834b308f8bba24fa4c248"
+        ),
+
+        .binaryTarget(
+            name: "zoomcml",
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.5/zoomcml.xcframework.zip",
+            checksum: "89ce9c5f7b80e758ca62936dc2caeae9cf3e744e79e21ec4c708384ed22485be"
+        ),
+
+        .binaryTarget(
+            name: "ZoomTask",
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.5/ZoomTask.xcframework.zip",
+            checksum: "ff8b43aceadbdeb8524f0130c25043ce3a9403f2612318ba6b1853fc694150ce"
+        ),
+
+        .binaryTarget(
+            name: "ZoomVideoSDK",
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.5/ZoomVideoSDK.xcframework.zip",
+            checksum: "dfb3018417bc4046190fde0b4f208a2ed004f0c70c92d3adb860cc74137af110"
+        ),
+
         .binaryTarget(
             name: "ZoomVideoSDKScreenShare",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.3.10/ZoomVideoSDKScreenShare.xcframework.zip",
-            checksum: "06e456c4c2c8b27b67b9b75ed825c577d2282e0be6d489d3b3258049000c12bc"
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.5/ZoomVideoSDKScreenShare.xcframework.zip",
+            checksum: "71cc896da93c5127a5214b365fca0ac9622150d6376de187272a50f076baea2f"
         ),
     ]
 )
