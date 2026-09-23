@@ -13,6 +13,8 @@ let package = Package(
         .library(name: "zm_annoter_dynamic",      targets: ["zm_annoter_dynamic"]),
         .library(name: "ZoomTask",                targets: ["ZoomTask"]),
         .library(name: "Whiteboard",              targets: ["Whiteboard"]),
+        .library(name: "util",                    targets: ["util"]),
+        .library(name: "zContext",                targets: ["zContext"]),
         .library(name: "ZoomVideoSDKScreenShare", targets: ["ZoomVideoSDKScreenShare"]),
     ],
     targets: [
@@ -69,7 +71,6 @@ let package = Package(
             url: "https://github.com/zoom/videosdk-ios/releases/download/v2.6.11/zoomcml.xcframework.zip",
             checksum: "40e9a9227cf2451c544a42aed9bb63157ee7ba286fdfd140797c678be70354a8"
         ),
-
     ]
 )
 
