@@ -18,45 +18,58 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "CptShare",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.12/CptShare.xcframework.zip",
-            checksum: "95a50c7511019c4bff8e359ad292536eb1b727a8ce1eb957fbf73d5cace19899"
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.6.11/CptShare.xcframework.zip",
+            checksum: "ce709a4a263b3959775f751a93f7257dfb596f7f5393e1a4a1e69fd4fdc7e91e"
         ),
 
         .binaryTarget(
             name: "Whiteboard",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.12/Whiteboard.xcframework.zip",
-            checksum: "56b00d81aa7318aa4eff6749afc455eb60c368989a5de285de3d788fff2d6dc7"
-        ),
-
-        .binaryTarget(
-            name: "zm_annoter_dynamic",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.12/zm_annoter_dynamic.xcframework.zip",
-            checksum: "92989278e8c663f137dd2f26dd96ed605af06f1f3d64d374ff5ef14aae082cae"
-        ),
-
-        .binaryTarget(
-            name: "zoomcml",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.12/zoomcml.xcframework.zip",
-            checksum: "5d4576c60ea44aead52cb49f2d6ac0eecbb8f35c57d6452a759caddf691a06d1"
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.6.11/Whiteboard.xcframework.zip",
+            checksum: "c3ce9b70031a2619ee00ca6882a92972ed93f478e68dc0e03a15d08e39c37a98"
         ),
 
         .binaryTarget(
             name: "ZoomTask",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.12/ZoomTask.xcframework.zip",
-            checksum: "1c912bb69e3060be21583c3b8897f11f68ae63d883c1d4d851e3e6ab8a300ddb"
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.6.11/ZoomTask.xcframework.zip",
+            checksum: "db63b88c39f79f2ccdb572310925452c077d1fccb5080aa278cf9222a0c729a4"
         ),
 
         .binaryTarget(
             name: "ZoomVideoSDK",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.12/ZoomVideoSDK.xcframework.zip",
-            checksum: "c60008b4571c102498697f0e049a714994aa09a44790f6d7287d2a6cac112ebd"
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.6.11/ZoomVideoSDK.xcframework.zip",
+            checksum: "9f4436ab85c63a1f4874a8b99bc958090685239ffed807504df6592848451448"
         ),
 
         .binaryTarget(
             name: "ZoomVideoSDKScreenShare",
-            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.4.12/ZoomVideoSDKScreenShare.xcframework.zip",
-            checksum: "02175608132cf9148b1a98775dfec8c05bc252c296d15bdf0788224d1684deda"
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.6.11/ZoomVideoSDKScreenShare.xcframework.zip",
+            checksum: "1619c1f988fc825636c0c73a0665f09ad26efa105e50a47d027e5104f7dc50a5"
         ),
+
+        .binaryTarget(
+            name: "util",
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.6.11/util.xcframework.zip",
+            checksum: "77a44d347abbd10624d9a1c97b500cac3293bb41e5b86217f487ec621c203667"
+        ),
+
+        .binaryTarget(
+            name: "zContext",
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.6.11/zContext.xcframework.zip",
+            checksum: "a2534a975976bc8de990889628323232189ad5c60e17e79aae46f03b12f27517"
+        ),
+
+        .binaryTarget(
+            name: "zm_annoter_dynamic",
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.6.11/zm_annoter_dynamic.xcframework.zip",
+            checksum: "77fb954b75fe8c55660d4ec54d6372ddfe7789d2f6a77ceb702fb20c07dc1088"
+        ),
+
+        .binaryTarget(
+            name: "zoomcml",
+            url: "https://github.com/zoom/videosdk-ios/releases/download/v2.6.11/zoomcml.xcframework.zip",
+            checksum: "40e9a9227cf2451c544a42aed9bb63157ee7ba286fdfd140797c678be70354a8"
+        ),
+
     ]
 )
 
