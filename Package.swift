@@ -71,6 +71,7 @@ let package = Package(
             url: "https://github.com/zoom/videosdk-ios/releases/download/v2.6.11/zoomcml.xcframework.zip",
             checksum: "40e9a9227cf2451c544a42aed9bb63157ee7ba286fdfd140797c678be70354a8"
         ),
+
     ]
 )
 
